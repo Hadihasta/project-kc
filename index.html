@@ -19,21 +19,155 @@
 
 
     <style>
-        /* base start  */
-        .background-image img {
-            width: 100%;
-            height: auto;
-            display: block;
+        /* html, body {
+    overflow-x: hidden !important;
+} */
+        /* import font */
+
+        /* Aerotis */
+        @font-face {
+            font-family: "Aerotis";
+            src: url("Fonts/Aerotis.ttf") format("truetype");
+            font-display: swap;
+        }
+
+        /* Aureligena */
+        @font-face {
+            font-family: "Aureligena";
+            src: url("Fonts/Aureligena.ttf") format("truetype");
+            font-display: swap;
+        }
+
+        /* Candlefish */
+        @font-face {
+            font-family: "Candlefish";
+            src: url("Fonts/Candlefish.ttf") format("truetype");
+            font-display: swap;
+        }
+
+        /* Minion Variable Concept Roman (variable font – normal) */
+        @font-face {
+            font-family: "MinionVariable";
+            src: url("Fonts/MinionVariableConcept-Roman.otf") format("opentype");
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Minion Variable Concept Italic (variable font – italic) */
+        @font-face {
+            font-family: "MinionVariable";
+            src: url("Fonts/MinionVariableConcept-Italic.otf") format("opentype");
+            font-weight: 100 900;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        /* Myriad Pro Regular */
+        @font-face {
+            font-family: "MyriadPro";
+            src: url("Fonts/MyriadPro-Regular.otf") format("opentype");
+            font-display: swap;
+        }
+
+        /* Times New Roman */
+        @font-face {
+            font-family: "TimesNewRoman";
+            src: url("Fonts/Times New Roman.ttf") format("truetype");
+            font-display: swap;
+        }
+
+
+
+        /* root  */
+
+        :root {
+            --font-aerotis: "Aerotis";
+            --font-aureligena: "Aureligena";
+            --font-candlefish: "Candlefish";
+            --font-minion: "MinionVariable";
+            --font-myriad: "MyriadPro";
+            --font-tnr: "TimesNewRoman";
+
+
+            --main-font: "Poppins", sans-serif;
+            --title-font: "Cormorant Garamond", serif;
+            --primaryOrange: #DFB97B;
+            --secondaryOrange: #C09052;
+            --primaryChocolate: #AD8B71;
+            --secondaryOrange: #7B6557;
+        }
+
+        /* media query start  */
+
+        /* mobile */
+        @media (max-width: 480px) {}
+
+        /* dekstop */
+        @media (min-width: 992px) {
+            #mobile_nav {
+                display: none;
+            }
+
+
+        }
+
+        /* media query end  */
+
+
+        /* base css  */
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        .flex-col-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-row-center {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .min-h-screen {
+            min-height: 100vh;
+            object-fit: cover;
+        }
+
+        .absolute {
             position: absolute;
         }
 
+        /* base end */
+
         /* Hamburger animation start */
+
+        #mobile_nav,
+        .hamburger,
+        #sidebar {
+            position: relative;
+            /* z index hamburger 9999 agar di atas filter hitam dan semua component yang ada (vektor, gambar, dll) */
+            z-index: 9999;
+        }
+
+
         .hamburger {
+            margin-left: 20px;
+            margin-top: 20px;
             width: 30px;
             height: 22px;
-            position: relative;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+
             cursor: pointer;
-            transition: all .3s;
+            transition: all .3s ease;
         }
 
         .hamburger span {
@@ -47,20 +181,23 @@
 
         .hamburger span:nth-child(1) {
             top: 0;
+            background: var(--primaryOrange);
         }
 
         .hamburger span:nth-child(2) {
             top: 9px;
+            background: var(--primaryOrange);
         }
 
         .hamburger span:nth-child(3) {
             top: 18px;
+            background: var(--primaryOrange);
         }
-
 
         .hamburger.active span:nth-child(1) {
             transform: rotate(45deg);
             top: 10px;
+            background: var(--secondaryOrange);
         }
 
         .hamburger.active span:nth-child(2) {
@@ -70,16 +207,217 @@
         .hamburger.active span:nth-child(3) {
             transform: rotate(-45deg);
             top: 10px;
+            background: var(--secondaryOrange);
         }
+
 
         /* Hamburger animation end */
-        /* image start */
-        .overlay {
-            display: flex;
-            position: absolute
+
+
+        /* sidebar start */
+
+        #sidebar {
+            /* font-family: var(--title-font); */
+            margin-left: 20px;
+            margin-top: 20px;
+            position: fixed;
+            top: 0;
+            /* hidden */
+            display: none;
+            width: 260px;
+            /* height: 100%; */
+            background: white;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, .2);
+            /* side bar z index berada di bawah hamburger 1 tingkat 9999-1 */
+            z-index: 9998;
         }
 
-        /* image end */
+        #sidebar.open {
+            display: block;
+        }
+
+
+        /* sidebar end */
+
+
+        /* Navbar start */
+        /* Desktop Navbar Style */
+        #dekstop_nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 9998;
+        }
+
+        /* Hilangkan background Bootstrap */
+        #dekstop_nav nav {
+            background: transparent !important;
+        }
+
+        /* Remove default .nav-link coloring */
+        #dekstop_nav .nav-link {
+            font-family: var(--font-minion);
+            font-size: 14px;
+            color: white !important;
+            letter-spacing: 2px;
+            margin: 0 12px;
+            font-weight: 300;
+            position: relative;
+            transition: 0.3s ease;
+        }
+
+        /* Bold on hover */
+        #dekstop_nav .nav-link:hover {
+            font-weight: 600;
+            color: white !important;
+        }
+
+        /* Small dot underline */
+        #dekstop_nav .nav-link::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            /* distance from text */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0;
+            transition: 0.3s ease;
+        }
+
+        /* Show the dot on hover */
+        #dekstop_nav .nav-link:hover::after {
+            opacity: 1;
+        }
+
+        /* Navbar end */
+
+
+
+        /* MENU LIST STYLE */
+        .header-menu {
+            font-family: var(--title-font);
+            background-color: var(--primaryOrange);
+            color: white;
+            padding: 18px;
+            font-weight: 600;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .menu-list a {
+            padding: 14px 20px;
+            display: block;
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .menu-list a:hover {
+            background: #f3f3f3;
+        }
+
+        /* sidebar end */
+
+
+        /* content-main  start*/
+
+        .background-image {
+            position: relative;
+        }
+
+
+        .background-image img {
+            width: 100%;
+            height: auto;
+            /* min-height: 100vh; */
+            display: block;
+        }
+
+
+
+
+        .bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .45);
+            /* z index overlay filter hitam 1 */
+            z-index: 1;
+        }
+
+
+        #content-main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            z-index: 5;
+            white-space: nowrap;
+            gap: clamp(20px, 6vw, 60px);
+
+        }
+
+        /* content-main  end*/
+
+        /* content-secondary start */
+
+        #section_2 {
+            overflow-x: hidden !important;
+        }
+
+        .bg-overlay_orange {
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+            background: rgba(233, 185, 123, .15);
+            /* z index overlay filter hitam 1 */
+            z-index: 1;
+        }
+
+        #content-secondary {
+            width: 100%;
+            position: absolute;
+            /* top: 50%;
+            left: 50%; */
+            /* transform: translate(-50%, -50%); */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* text-align: center; */
+            /* color: white; */
+            z-index: 5;
+            /* white-space: nowrap; */
+            /* gap: clamp(20px, 6vw, 60px); */
+
+        }
+
+
+        /* vektor flower start */
+        #vektor_flower_1 {
+            position: absolute;
+            right: -200px;
+            top: -153px;
+            width: 500px;
+            pointer-events: none;
+        }
+
+        /* vektor flower end */
+
+        /* content-secondary end */
     </style>
 
 </head>
@@ -87,21 +425,117 @@
 <body>
     <!-- page -->
     <div>
-        <!-- page 1 -->
-        <div id="section_1" class="background-image ">
-            <img src="uploads/main-section.png" alt="main-section">
+        <!-- section 1 -->
 
-            <!-- sidebar -->
-            <div id="menuBtn" class="hamburger m-3">
+
+        <div id="mobile_nav">
+            <div id="menuBtn" class="hamburger ">
                 <span></span><span></span><span></span>
             </div>
+            <!-- sidebar -->
+            <div id="sidebar" class="sidebar">
+                <div class="header-menu">Kelvin & Cynthia</div>
+
+                <div class="menu-list">
+
+                    <a href="#">HOME</a>
+                    <a href="#">THE WEDDING</a>
+                    <a href="#">LOCATION</a>
+                    <a href="#">GALLERY</a>
+                    <a href="#">RSVP</a>
+                    <a href="#">DRESS CODE</a>
+                    <a href="#">PERSONAL MESSAGES</a>
+
+                </div>
+            </div>
+        </div>
 
 
+        <div id="dekstop_nav" class="d-none d-lg-block">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid justify-content-center">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="#">HOME</a>
+                        <a class="nav-link" href="#">THE WEDDING</a>
+                        <a class="nav-link" href="#">LOCATION</a>
+                        <a class="nav-link" href="#">GALLERY</a>
+                        <a class="nav-link" href="#">RSVP</a>
+                        <a class="nav-link" href="#">DRESS CODE</a>
+                        <a class="nav-link" href="#">PERSONAL MESSAGES</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <div id="section_1" class="background-image">
+            <img src="uploads/main-section.png" class="min-h-screen" alt="main-section">
+            <div id="content-main">
+
+                <img src="uploads/logo-KC.svg" alt="logo-kc" class="logo-kc  w-50">
+
+                <h2 class="fw-lighte" style="font-family: var(--font-minion);  font-size: clamp(12px, 5vw, 60px);">THE
+                    WEDDING OF</h2>
+                <h2 style="font-family: var(--font-aerotis); font-size: clamp(30px, 6vw, 100px);">Kelvin & Cynthia</h2>
+                <h2 style="font-family: var(--font-aerotis); font-size: clamp(20px, 3vw, 60px);">28 . 06 . 2025</h2>
+            </div>
+            <div class="bg-overlay"></div>
+            <!-- content -->
 
 
         </div>
 
+
+        <div id="section_2" class="min-h-screen bg-primaryChocolate ">
+
+            <div id="vektor_flower_1" class="position-relative ">
+                <img src="uploads/vektor/Flower_1.svg" alt="flower_1" class="absolute  ">
+            </div>
+
+
+            <div class="bg-overlay_orange"></div>
+            <!-- need to reposition  -->
+            <div id="vektor_flower_2" class="position-relative ">
+                <img src="uploads/vektor/Flower_2_part_1.svg" alt="flower_1" class="absolute">
+                <img src="uploads/vektor/Flower_2_part_2.svg" alt="flower_1" class="absolute">
+                <img src="uploads/vektor/Flower_2_part_3.svg" alt="flower_1" class="absolute">
+                <img src="uploads/vektor/Flower_2_part_4.svg" alt="flower_1" class="absolute">
+            </div>
+
+            <div id="content-secondary">
+                <!-- logo -->
+                <img src="uploads/icon/logo-KC_chocolate.svg" alt="logo-kc" class="logo-kc  w-25">
+                <!-- text -->
+                <div id="text_group" class="flex-col-center nowrap">
+                    <span>By the grace of God,</span>
+                    <span>MR. SUDIANTO & MRS. MIMI</span>
+                    <span>together with</span>
+                    <span>Ir. Paulus Wiranto Jodhinata & Ira Winarti S.H.</span>
+                    <span>cordially request the honor of your presence</span>
+                    <span>at the marriage of our children</span>
+                </div>
+                <!-- potrait and name -->
+                <div id="potrait_name" class="flex-row-center nowrap">
+                    <img src="uploads/photo/Kelvin-potrait_name.svg" alt="logo-kc" class="logo-kc  w-25">
+
+                    <span> & </span>
+
+                    <img src="uploads/photo/Cynthia-potrait_name.svg" alt="logo-kc" class="logo-kc  w-25">
+                </div>
+                <!-- text -->
+                <div id="text_group_2" class="flex-col-center nowrap">
+                    <span>Our joy will be complete with your presence and
+                    </span>
+                    <span>blessings at our celebration of love.</span>
+
+                </div>
+            </div>
+
+        </div>
     </div>
+
+
 
 
 
@@ -128,19 +562,22 @@
         var swiper = new Swiper(".mySwiper", { loop: true });
 
         $("#menuBtn").on("click", function () {
+            // hamburger class
             $(this).toggleClass("active");
+            // sidebar class
             $("#sidebar").toggleClass("open");
-            $("#overlay").toggleClass("show");
+
         });
 
         $("#overlay").on("click", function () {
             $("#menuBtn").removeClass("active");
             $("#sidebar").removeClass("open");
-            $(this).removeClass("show");
+
         });
 
 
     </script>
+
 
 </body>
 
