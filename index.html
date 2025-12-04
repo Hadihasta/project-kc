@@ -93,8 +93,12 @@
         }
 
         /* media query start  */
+        /* mobile */
+        @media (max-width: 480px) {
 
 
+        }
+        /* dekstop */
         @media (min-width: 1023px) {
             #mobile_nav {
                 display: none;
@@ -115,6 +119,7 @@
         .background-image img {
             width: 100%;
             height: auto;
+            /* min-height: 100vh; */
             display: block;
         }
 
@@ -246,22 +251,28 @@
         /* sidebar end */
 
 
-        /* content-main */
-        .content-main {
-            color: white;
+        /* content-main  start*/
+        #content-main {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 5;
-            /* penting agar di atas overlay */
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+
+            color: white;
+            z-index: 5;
+            white-space: nowrap;
+            gap: clamp(20px, 6vw, 60px);
+
         }
 
-        .logo-kc{
-            width: 100px;
-            height: 20px;
-        }
+         /* content-main  end*/
+
     </style>
 
 </head>
@@ -295,13 +306,15 @@
         </div>
 
         <div id="section_1" class="background-image">
-            <img src="uploads/main-section.png" alt="main-section">
-            <div class="content-main">
+            <img src="uploads/main-section.png" alt="main-section" style="min-height: 100vh; object-fit: cover;">
+            <div id="content-main">
 
-                <img src="uploads/logo-KC.svg" alt="logo-kc" class="logo-kc" style="height: 100px;">
-                <h2 style="font-family: var(--font-minion); font-weight: 300;">THE WEDDING OF</h2>
-                <h2 style="font-family: var(--font-aerotis); font-size: 32px;">Kelvin & Cynthia</h2>
-                <h2 style="font-family: var(--font-aerotis); font-size: 32px;">28 . 06 . 2025</h2>
+                <img src="uploads/logo-KC.svg" alt="logo-kc" class="logo-kc  w-50">
+
+                <h2 class="fw-lighte" style="font-family: var(--font-minion);  font-size: clamp(12px, 5vw, 60px);">THE
+                    WEDDING OF</h2>
+                <h2 style="font-family: var(--font-aerotis); font-size: clamp(30px, 6vw, 100px);">Kelvin & Cynthia</h2>
+                <h2 style="font-family: var(--font-aerotis); font-size: clamp(20px, 3vw, 60px);">28 . 06 . 2025</h2>
             </div>
             <div class="bg-overlay"></div>
             <!-- content -->
