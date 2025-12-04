@@ -51,8 +51,6 @@
             width: 100%;
             height: auto;
             display: block;
-            /* position: absolute;
-            z-index: 0; */
         }
 
         .bg-overlay {
@@ -62,6 +60,7 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, .45);
+            /* z index overlay filter hitam 1 */
             z-index: 1;
 
         }
@@ -74,7 +73,8 @@
         .hamburger,
         #sidebar {
             position: relative;
-            z-index: 3;
+            /* z index hamburger 9999 agar di atas filter hitam dan semua component yang ada (vektor, gambar, dll) */
+            z-index: 9999;
         }
 
 
@@ -86,7 +86,7 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            z-index: 9999;
+
             cursor: pointer;
             transition: all .3s ease;
         }
@@ -144,6 +144,7 @@
             /* height: 100%; */
             background: white;
             box-shadow: 2px 0 10px rgba(0, 0, 0, .2);
+            /* side bar z index berada di bawah hamburger 1 tingkat 9999-1 */
             z-index: 9998;
         }
 
@@ -151,21 +152,8 @@
             display: block;
         }
 
-        /* overlay */
-        #overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, .4);
-            display: none;
-            z-index: 9997;
-        }
 
-        #overlay.show {
-            display: block;
-        }
+
 
         /* MENU LIST STYLE */
         .header-menu {
@@ -280,15 +268,17 @@
         var swiper = new Swiper(".mySwiper", { loop: true });
 
         $("#menuBtn").on("click", function () {
+            // hamburger class
             $(this).toggleClass("active");
+            // sidebar class
             $("#sidebar").toggleClass("open");
-            $("#overlay").toggleClass("show");
+
         });
 
         $("#overlay").on("click", function () {
             $("#menuBtn").removeClass("active");
             $("#sidebar").removeClass("open");
-            $(this).removeClass("show");
+
         });
 
 
