@@ -96,6 +96,7 @@
         }
 
         /* media query start  */
+
         /* mobile */
         @media (max-width: 480px) {}
 
@@ -113,27 +114,22 @@
 
         /* base css  */
 
-        .background-image {
-            position: relative;
+        .nowrap {
+            white-space: nowrap;
         }
 
-
-        .background-image img {
-            width: 100%;
-            height: auto;
-            /* min-height: 100vh; */
-            display: block;
+        .flex-col-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        .bg-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, .45);
-            /* z index overlay filter hitam 1 */
-            z-index: 1;
+        .flex-row-center {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
 
         .min-h-screen {
@@ -194,7 +190,7 @@
         .hamburger.active span:nth-child(1) {
             transform: rotate(45deg);
             top: 10px;
-              background: var(--secondaryOrange);
+            background: var(--secondaryOrange);
         }
 
         .hamburger.active span:nth-child(2) {
@@ -204,7 +200,7 @@
         .hamburger.active span:nth-child(3) {
             transform: rotate(-45deg);
             top: 10px;
-             background: var(--secondaryOrange);
+            background: var(--secondaryOrange);
         }
 
 
@@ -321,6 +317,34 @@
 
 
         /* content-main  start*/
+
+        .background-image {
+            position: relative;
+        }
+
+
+        .background-image img {
+            width: 100%;
+            height: auto;
+            /* min-height: 100vh; */
+            display: block;
+        }
+
+
+
+
+        .bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .45);
+            /* z index overlay filter hitam 1 */
+            z-index: 1;
+        }
+
+
         #content-main {
             position: absolute;
             top: 50%;
@@ -339,6 +363,39 @@
         }
 
         /* content-main  end*/
+
+        /* content-secondary start */
+
+
+        .bg-overlay_orange {
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+            background: rgba(233, 185, 123, .15);
+            /* z index overlay filter hitam 1 */
+            z-index: 1;
+        }
+
+        #content-secondary {
+            width: 100%;
+            position: absolute;
+            /* top: 50%;
+            left: 50%; */
+            /* transform: translate(-50%, -50%); */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* text-align: center; */
+            /* color: white; */
+            z-index: 5;
+            /* white-space: nowrap; */
+            /* gap: clamp(20px, 6vw, 60px); */
+
+        }
+
+        /* content-secondary end */
     </style>
 
 </head>
@@ -406,50 +463,83 @@
 
 
         </div>
-    </div>
+
+
+        <div id="section_2" class="min-h-screen bg-primaryChocolate">
+
+            <div class="bg-overlay_orange"></div>
+            <div id="content-secondary">
+                <!-- logo -->
+                <img src="uploads/icon/logo-KC_chocolate.svg" alt="logo-kc" class="logo-kc  w-25">
+                <!-- text -->
+                <div id="text_group" class="flex-col-center nowrap">
+                    <span>By the grace of God,</span>
+                    <span>MR. SUDIANTO & MRS. MIMI</span>
+                    <span>together with</span>
+                    <span>Ir. Paulus Wiranto Jodhinata & Ira Winarti S.H.</span>
+                    <span>cordially request the honor of your presence</span>
+                    <span>at the marriage of our children</span>
+                </div>
+                <!-- potrait and name -->
+                <div id="potrait_name" class="flex-row-center nowrap">
+                    <img src="uploads/photo/Kelvin-potrait_name.svg" alt="logo-kc" class="logo-kc  w-25">
+
+                    <span> & </span>
+
+                    <img src="uploads/photo/Cynthia-potrait_name.svg" alt="logo-kc" class="logo-kc  w-25">
+                </div>
+                <!-- text -->
+                <div id="text_group_2" class="flex-col-center nowrap">
+                    <span>Our joy will be complete with your presence and
+                    </span>
+                    <span>blessings at our celebration of love.</span>
+
+                </div>
+            </div>
+        </div>
 
 
 
 
 
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <!-- Bootstrap 4.6.2 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap 4.6.2 -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- AOS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+        <!-- AOS -->
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- Swiper -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Fancybox -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+        <!-- Fancybox -->
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
-    <script>
-        /*  INIT AOS  */
-        AOS.init();
+        <script>
+            /*  INIT AOS  */
+            AOS.init();
 
-        /*  INIT SWIPER  */
-        var swiper = new Swiper(".mySwiper", { loop: true });
+            /*  INIT SWIPER  */
+            var swiper = new Swiper(".mySwiper", { loop: true });
 
-        $("#menuBtn").on("click", function () {
-            // hamburger class
-            $(this).toggleClass("active");
-            // sidebar class
-            $("#sidebar").toggleClass("open");
+            $("#menuBtn").on("click", function () {
+                // hamburger class
+                $(this).toggleClass("active");
+                // sidebar class
+                $("#sidebar").toggleClass("open");
 
-        });
+            });
 
-        $("#overlay").on("click", function () {
-            $("#menuBtn").removeClass("active");
-            $("#sidebar").removeClass("open");
+            $("#overlay").on("click", function () {
+                $("#menuBtn").removeClass("active");
+                $("#sidebar").removeClass("open");
 
-        });
+            });
 
 
-    </script>
+        </script>
 
 </body>
 
