@@ -19,9 +19,74 @@
 
 
     <style>
+        /* import font */
+
+        /* Aerotis */
+        @font-face {
+            font-family: "Aerotis";
+            src: url("Fonts/Aerotis.ttf") format("truetype");
+            font-display: swap;
+        }
+
+        /* Aureligena */
+        @font-face {
+            font-family: "Aureligena";
+            src: url("Fonts/Aureligena.ttf") format("truetype");
+            font-display: swap;
+        }
+
+        /* Candlefish */
+        @font-face {
+            font-family: "Candlefish";
+            src: url("Fonts/Candlefish.ttf") format("truetype");
+            font-display: swap;
+        }
+
+        /* Minion Variable Concept Roman (variable font – normal) */
+        @font-face {
+            font-family: "MinionVariable";
+            src: url("Fonts/MinionVariableConcept-Roman.otf") format("opentype");
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Minion Variable Concept Italic (variable font – italic) */
+        @font-face {
+            font-family: "MinionVariable";
+            src: url("Fonts/MinionVariableConcept-Italic.otf") format("opentype");
+            font-weight: 100 900;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        /* Myriad Pro Regular */
+        @font-face {
+            font-family: "MyriadPro";
+            src: url("Fonts/MyriadPro-Regular.otf") format("opentype");
+            font-display: swap;
+        }
+
+        /* Times New Roman */
+        @font-face {
+            font-family: "TimesNewRoman";
+            src: url("Fonts/Times New Roman.ttf") format("truetype");
+            font-display: swap;
+        }
+
+
+
         /* root  */
 
         :root {
+            --font-aerotis: "Aerotis";
+            --font-aureligena: "Aureligena";
+            --font-candlefish: "Candlefish";
+            --font-minion: "MinionVariable";
+            --font-myriad: "MyriadPro";
+            --font-tnr: "TimesNewRoman";
+
+
             --main-font: "Poppins", sans-serif;
             --title-font: "Cormorant Garamond", serif;
             --primaryOrange: #DFB97B;
@@ -183,6 +248,7 @@
 
         /* content-main */
         .content-main {
+            color: white;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -190,6 +256,11 @@
             z-index: 5;
             /* penting agar di atas overlay */
             text-align: center;
+        }
+
+        .logo-kc{
+            width: 100px;
+            height: 20px;
         }
     </style>
 
@@ -227,15 +298,13 @@
             <img src="uploads/main-section.png" alt="main-section">
             <div class="content-main">
 
-                <img src="uploads/logo-KC.svg" alt="logo-kc">
+                <img src="uploads/logo-KC.svg" alt="logo-kc" class="logo-kc" style="height: 100px;">
+                <h2 style="font-family: var(--font-minion); font-weight: 300;">THE WEDDING OF</h2>
+                <h2 style="font-family: var(--font-aerotis); font-size: 32px;">Kelvin & Cynthia</h2>
+                <h2 style="font-family: var(--font-aerotis); font-size: 32px;">28 . 06 . 2025</h2>
             </div>
             <div class="bg-overlay"></div>
             <!-- content -->
-
-
-
-
-
 
 
         </div>
