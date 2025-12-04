@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wedding Invitation</title>
+    <!--  BOOTSTRAP 4.6.2  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!--  AOS (Animate on Scroll) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <!-- SWIPER.JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!--Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- Fancybox (requires jQuery) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+
+    <style>
+        /* base start  */
+        .background-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            position: absolute;
+        }
+
+        /* Hamburger animation start */
+        .hamburger {
+            width: 30px;
+            height: 22px;
+            position: relative;
+            cursor: pointer;
+            transition: all .3s;
+        }
+
+        .hamburger span {
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #6d4a3b;
+            left: 0;
+            transition: .3s;
+        }
+
+        .hamburger span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger span:nth-child(2) {
+            top: 9px;
+        }
+
+        .hamburger span:nth-child(3) {
+            top: 18px;
+        }
+
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 10px;
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 10px;
+        }
+
+        /* Hamburger animation end */
+        /* image start */
+        .overlay {
+            display: flex;
+            position: absolute
+        }
+
+        /* image end */
+    </style>
+
+</head>
+
+<body>
+    <!-- page -->
+    <div>
+        <!-- page 1 -->
+        <div id="section_1" class="background-image ">
+            <img src="uploads/main-section.png" alt="main-section">
+
+            <!-- sidebar -->
+            <div id="menuBtn" class="hamburger m-3">
+                <span></span><span></span><span></span>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap 4.6.2 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Fancybox -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <script>
+        /*  INIT AOS  */
+        AOS.init();
+
+        /*  INIT SWIPER  */
+        var swiper = new Swiper(".mySwiper", { loop: true });
+
+        $("#menuBtn").on("click", function () {
+            $(this).toggleClass("active");
+            $("#sidebar").toggleClass("open");
+            $("#overlay").toggleClass("show");
+        });
+
+        $("#overlay").on("click", function () {
+            $("#menuBtn").removeClass("active");
+            $("#sidebar").removeClass("open");
+            $(this).removeClass("show");
+        });
+
+
+    </script>
+
+</body>
+
+</html>
