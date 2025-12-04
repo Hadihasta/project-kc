@@ -19,6 +19,9 @@
 
 
     <style>
+        /* html, body {
+    overflow-x: hidden !important;
+} */
         /* import font */
 
         /* Aerotis */
@@ -135,6 +138,10 @@
         .min-h-screen {
             min-height: 100vh;
             object-fit: cover;
+        }
+
+        .absolute {
+            position: absolute;
         }
 
         /* base end */
@@ -366,6 +373,9 @@
 
         /* content-secondary start */
 
+        #section_2 {
+            overflow-x: hidden !important;
+        }
 
         .bg-overlay_orange {
             position: absolute;
@@ -394,6 +404,18 @@
             /* gap: clamp(20px, 6vw, 60px); */
 
         }
+
+
+        /* vektor flower start */
+        #vektor_flower_1 {
+            position: absolute;
+            right: -200px;
+            top: -153px;
+            width: 500px;
+            pointer-events: none;
+        }
+
+        /* vektor flower end */
 
         /* content-secondary end */
     </style>
@@ -465,9 +487,22 @@
         </div>
 
 
-        <div id="section_2" class="min-h-screen bg-primaryChocolate">
+        <div id="section_2" class="min-h-screen bg-primaryChocolate ">
+
+            <div id="vektor_flower_1" class="position-relative ">
+                <img src="uploads/vektor/Flower_1.svg" alt="flower_1" class="absolute  ">
+            </div>
+
 
             <div class="bg-overlay_orange"></div>
+            <!-- need to reposition  -->
+            <div id="vektor_flower_2" class="position-relative ">
+                <img src="uploads/vektor/Flower_2_part_1.svg" alt="flower_1" class="absolute">
+                <img src="uploads/vektor/Flower_2_part_2.svg" alt="flower_1" class="absolute">
+                <img src="uploads/vektor/Flower_2_part_3.svg" alt="flower_1" class="absolute">
+                <img src="uploads/vektor/Flower_2_part_4.svg" alt="flower_1" class="absolute">
+            </div>
+
             <div id="content-secondary">
                 <!-- logo -->
                 <img src="uploads/icon/logo-KC_chocolate.svg" alt="logo-kc" class="logo-kc  w-25">
@@ -496,50 +531,53 @@
 
                 </div>
             </div>
+
         </div>
+    </div>
 
 
 
 
 
-        <!-- jquery -->
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-        <!-- Bootstrap 4.6.2 -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 4.6.2 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
-        <!-- AOS -->
-        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 
-        <!-- Swiper -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        <!-- Fancybox -->
-        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <!-- Fancybox -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
-        <script>
-            /*  INIT AOS  */
-            AOS.init();
+    <script>
+        /*  INIT AOS  */
+        AOS.init();
 
-            /*  INIT SWIPER  */
-            var swiper = new Swiper(".mySwiper", { loop: true });
+        /*  INIT SWIPER  */
+        var swiper = new Swiper(".mySwiper", { loop: true });
 
-            $("#menuBtn").on("click", function () {
-                // hamburger class
-                $(this).toggleClass("active");
-                // sidebar class
-                $("#sidebar").toggleClass("open");
+        $("#menuBtn").on("click", function () {
+            // hamburger class
+            $(this).toggleClass("active");
+            // sidebar class
+            $("#sidebar").toggleClass("open");
 
-            });
+        });
 
-            $("#overlay").on("click", function () {
-                $("#menuBtn").removeClass("active");
-                $("#sidebar").removeClass("open");
+        $("#overlay").on("click", function () {
+            $("#menuBtn").removeClass("active");
+            $("#sidebar").removeClass("open");
 
-            });
+        });
 
 
-        </script>
+    </script>
+
 
 </body>
 
