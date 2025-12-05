@@ -91,6 +91,39 @@
 
 /* base css  */
 
+.vh-5 {
+  height: 5vh;
+}
+
+.vh-10 {
+  height: 10vh;
+}
+
+
+.vh-15 {
+  height: 15vh;
+}
+
+
+.vh-20 {
+  height: 20vh;
+}
+
+
+
+.vh-85 {
+  height: 85vh;
+}
+
+
+.vh-80 {
+  height: 80vh;
+}
+
+.vh-90 {
+  height: 90vh;
+}
+
 .nowrap {
   white-space: nowrap;
 }
@@ -334,34 +367,25 @@
 /* content-secondary start */
 
 #section_2 {
-  overflow-x: hidden !important;
+  overflow: hidden !important;
+  position: relative;
 }
 
 .bg-overlay_orange {
   position: absolute;
-
-  width: 100%;
-  height: 100%;
-  background: rgba(233, 185, 123, 0.15);
-  /* z index overlay filter hitam 1 */
-  z-index: 1;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  pointer-events: none; /* biar tidak ganggu klik */
+  z-index: 2; /* overlay di atas background */
+  overflow: visible !important; /* jangan potong child */
 }
 
 #content-secondary {
   width: 100%;
-  position: absolute;
-  /* top: 50%;
-  left: 50%; */
-  /* transform: translate(-50%, -50%); */
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
-  /* color: white; */
-  z-index: 5;
-  /* white-space: nowrap; */
-  /* gap: clamp(20px, 6vw, 60px); */
 }
 
 /* vektor flower start */
@@ -374,48 +398,54 @@
 }
 /* Container Flower 2 */
 #vektor_flower_2 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 400px; /* boleh disesuaikan */
-    height: 400px; /* boleh disesuaikan */
-    pointer-events: none;
-    z-index: 1; /* di bawah content */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 400px; 
+  height: 400px; 
+  pointer-events: none;
+  z-index: 1; 
 }
 
-/* Semua part jadi absolute */
+
 #vektor_flower_2 img {
-    position: absolute;
-    width: 100%; /* default */
+  position: absolute;
+  width: 100%; 
 }
 
 /* Custom posisi masing-masing part flower */
 #vektor_flower_2 img:nth-child(1) {
-   right: 161px;
-    rotate: -73deg;
-    bottom: 40px;
-    z-index: 1;
+  right: 161px;
+  rotate: -73deg;
+  bottom: 40px;
+  z-index: 1;
 }
 
 #vektor_flower_2 img:nth-child(2) {
-      right: 137px;
-    z-index: 3;
-    top: 33px;
+  right: 137px;
+  z-index: 3;
+  top: 33px;
 }
 
 #vektor_flower_2 img:nth-child(3) {
-    right: 140px;
-    bottom: -33px;
-    rotate: 30deg;
-        z-index: 2;
+  right: 140px;
+  bottom: -33px;
+  rotate: 30deg;
+  z-index: 2;
 }
 
 #vektor_flower_2 img:nth-child(4) {
-     right: 100px;
-    rotate: 78deg;
-    z-index: 2;
-    top: 199px;
+  right: 80px;
+  rotate: 85deg;
+  z-index: 2;
+  top: 204px;
+  width: 300px;
+  height: 300px;
 }
 /* vektor flower end */
 
+#time-countdown {
+  background-color: var(--primaryOrange);
+  z-index: 6;
+}
 /* content-secondary end */
