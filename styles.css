@@ -1,0 +1,421 @@
+/* html, body {
+    overflow-x: hidden !important;
+} */
+/* import font */
+
+/* Aerotis */
+@font-face {
+  font-family: 'Aerotis';
+  src: url('Fonts/Aerotis.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Aureligena */
+@font-face {
+  font-family: 'Aureligena';
+  src: url('Fonts/Aureligena.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Candlefish */
+@font-face {
+  font-family: 'Candlefish';
+  src: url('Fonts/Candlefish.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Minion Variable Concept Roman (variable font – normal) */
+@font-face {
+  font-family: 'MinionVariable';
+  src: url('Fonts/MinionVariableConcept-Roman.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Minion Variable Concept Italic (variable font – italic) */
+@font-face {
+  font-family: 'MinionVariable';
+  src: url('Fonts/MinionVariableConcept-Italic.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Myriad Pro Regular */
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('Fonts/MyriadPro-Regular.otf') format('opentype');
+  font-display: swap;
+}
+
+/* Times New Roman */
+@font-face {
+  font-family: 'TimesNewRoman';
+  src: url('Fonts/Times New Roman.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* root  */
+
+:root {
+  --font-aerotis: 'Aerotis';
+  --font-aureligena: 'Aureligena';
+  --font-candlefish: 'Candlefish';
+  --font-minion: 'MinionVariable';
+  --font-myriad: 'MyriadPro';
+  --font-tnr: 'TimesNewRoman';
+
+  --main-font: 'Poppins', sans-serif;
+  --title-font: 'Cormorant Garamond', serif;
+  --primaryOrange: #dfb97b;
+  --secondaryOrange: #c09052;
+  --primaryChocolate: #ad8b71;
+  --secondaryOrange: #7b6557;
+}
+
+/* media query start  */
+
+/* mobile */
+@media (max-width: 480px) {
+}
+
+/* dekstop */
+@media (min-width: 992px) {
+  #mobile_nav {
+    display: none;
+  }
+}
+
+/* media query end  */
+
+/* base css  */
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+  object-fit: cover;
+}
+
+.absolute {
+  position: absolute;
+}
+
+/* base end */
+
+/* Hamburger animation start */
+
+#mobile_nav,
+.hamburger,
+#sidebar {
+  position: relative;
+  /* z index hamburger 9999 agar di atas filter hitam dan semua component yang ada (vektor, gambar, dll) */
+  z-index: 9999;
+}
+
+.hamburger {
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 30px;
+  height: 22px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hamburger span {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #6d4a3b;
+  left: 0;
+  transition: 0.3s;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+  background: var(--primaryOrange);
+}
+
+.hamburger span:nth-child(2) {
+  top: 9px;
+  background: var(--primaryOrange);
+}
+
+.hamburger span:nth-child(3) {
+  top: 18px;
+  background: var(--primaryOrange);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+  background: var(--secondaryOrange);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 10px;
+  background: var(--secondaryOrange);
+}
+
+/* Hamburger animation end */
+
+/* sidebar start */
+
+#sidebar {
+  /* font-family: var(--title-font); */
+  margin-left: 20px;
+  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  /* hidden */
+  display: none;
+  width: 260px;
+  /* height: 100%; */
+  background: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  /* side bar z index berada di bawah hamburger 1 tingkat 9999-1 */
+  z-index: 9998;
+}
+
+#sidebar.open {
+  display: block;
+}
+
+/* sidebar end */
+
+/* Navbar start */
+/* Desktop Navbar Style */
+#dekstop_nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9998;
+}
+
+/* Hilangkan background Bootstrap */
+#dekstop_nav nav {
+  background: transparent !important;
+}
+
+/* Remove default .nav-link coloring */
+#dekstop_nav .nav-link {
+  font-family: var(--font-minion);
+  font-size: 14px;
+  color: white !important;
+  letter-spacing: 2px;
+  margin: 0 12px;
+  font-weight: 300;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+/* Bold on hover */
+#dekstop_nav .nav-link:hover {
+  font-weight: 600;
+  color: white !important;
+}
+
+/* Small dot underline */
+#dekstop_nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  /* distance from text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+/* Show the dot on hover */
+#dekstop_nav .nav-link:hover::after {
+  opacity: 1;
+}
+
+/* Navbar end */
+
+/* MENU LIST STYLE */
+.header-menu {
+  font-family: var(--title-font);
+  background-color: var(--primaryOrange);
+  color: white;
+  padding: 18px;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+
+.menu-list a {
+  padding: 14px 20px;
+  display: block;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu-list a:hover {
+  background: #f3f3f3;
+}
+
+/* sidebar end */
+
+/* content-main  start*/
+
+.background-image {
+  position: relative;
+}
+
+.background-image img {
+  width: 100%;
+  height: auto;
+  /* min-height: 100vh; */
+  display: block;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  /* z index overlay filter hitam 1 */
+  z-index: 1;
+}
+
+#content-main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  z-index: 5;
+  white-space: nowrap;
+  gap: clamp(20px, 6vw, 60px);
+}
+
+/* content-main  end*/
+
+/* content-secondary start */
+
+#section_2 {
+  overflow-x: hidden !important;
+}
+
+.bg-overlay_orange {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  background: rgba(233, 185, 123, 0.15);
+  /* z index overlay filter hitam 1 */
+  z-index: 1;
+}
+
+#content-secondary {
+  width: 100%;
+  position: absolute;
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  /* color: white; */
+  z-index: 5;
+  /* white-space: nowrap; */
+  /* gap: clamp(20px, 6vw, 60px); */
+}
+
+/* vektor flower start */
+#vektor_flower_1 {
+  position: absolute;
+  right: -250px;
+  top: -153px;
+  width: 500px;
+  pointer-events: none;
+}
+/* Container Flower 2 */
+#vektor_flower_2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400px; /* boleh disesuaikan */
+    height: 400px; /* boleh disesuaikan */
+    pointer-events: none;
+    z-index: 1; /* di bawah content */
+}
+
+/* Semua part jadi absolute */
+#vektor_flower_2 img {
+    position: absolute;
+    width: 100%; /* default */
+}
+
+/* Custom posisi masing-masing part flower */
+#vektor_flower_2 img:nth-child(1) {
+   right: 161px;
+    rotate: -73deg;
+    bottom: 40px;
+    z-index: 1;
+}
+
+#vektor_flower_2 img:nth-child(2) {
+      right: 137px;
+    z-index: 3;
+    top: 33px;
+}
+
+#vektor_flower_2 img:nth-child(3) {
+    right: 140px;
+    bottom: -33px;
+    rotate: 30deg;
+        z-index: 2;
+}
+
+#vektor_flower_2 img:nth-child(4) {
+     right: 100px;
+    rotate: 78deg;
+    z-index: 2;
+    top: 199px;
+}
+/* vektor flower end */
+
+/* content-secondary end */
