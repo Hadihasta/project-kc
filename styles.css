@@ -372,7 +372,7 @@
   pointer-events: none; /* biar tidak ganggu klik */
   z-index: 2; /* overlay di atas background */
   overflow: visible !important; /* jangan potong child */
-    background: rgba(223,185,123,0.05);
+  background: rgba(223, 185, 123, 0.05);
 }
 
 #content-secondary {
@@ -479,4 +479,18 @@
   pointer-events: none;
 }
 
+#image_place_1 img {
+  width: 250px;
+}
+
+#image_place_2 img {
+  width: 250px;
+}
+
+.text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 /* content-3 end */
