@@ -372,6 +372,7 @@
   pointer-events: none; /* biar tidak ganggu klik */
   z-index: 2; /* overlay di atas background */
   overflow: visible !important; /* jangan potong child */
+    background: rgba(223,185,123,0.05);
 }
 
 #content-secondary {
@@ -391,7 +392,6 @@
   right: -182px;
   top: -185px;
   width: 400px;
-
   pointer-events: none;
 }
 /* Container Flower 2 */
@@ -443,10 +443,20 @@
 /* vektor flower end */
 
 /* extras (dragonfly) start */
-#vektor_dragonfly_2 {
+#vektor_dragonfly_2 img {
   width: 100px;
+  rotate: 45deg;
 }
 /* extras (dragonfly)  end*/
+
+/* extras (butterfly) start */
+#vektor_butterfly_2 img {
+  position: absolute;
+  width: 100px;
+  bottom: 9px;
+  left: 118px;
+}
+/* extras (butterfly)  end*/
 
 #time-countdown {
   background-color: var(--primaryOrange);
@@ -455,5 +465,18 @@
 /* content-2 end */
 
 /* content-3 start */
+
+#section_3 {
+  overflow: hidden !important;
+  position: relative;
+}
+
+#vektor_flower_section_3 img {
+  position: absolute;
+  width: 400px;
+  right: -176px;
+  top: -84px;
+  pointer-events: none;
+}
 
 /* content-3 end */
