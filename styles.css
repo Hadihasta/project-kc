@@ -99,22 +99,17 @@
   height: 10vh;
 }
 
-
 .vh-15 {
   height: 15vh;
 }
-
 
 .vh-20 {
   height: 20vh;
 }
 
-
-
 .vh-85 {
   height: 85vh;
 }
-
 
 .vh-80 {
   height: 80vh;
@@ -322,7 +317,7 @@
 
 /* sidebar end */
 
-/* content-main  start*/
+/* content-1  start*/
 
 .background-image {
   position: relative;
@@ -362,9 +357,9 @@
   gap: clamp(20px, 6vw, 60px);
 }
 
-/* content-main  end*/
+/* content-1  end*/
 
-/* content-secondary start */
+/* content-2 start */
 
 #section_2 {
   overflow: hidden !important;
@@ -389,11 +384,14 @@
 }
 
 /* vektor flower start */
+
 #vektor_flower_1 {
-  position: absolute;
-  right: -250px;
-  top: -153px;
-  width: 500px;
+  /* position: absolute; */
+  rotate: -20deg;
+  right: -182px;
+  top: -185px;
+  width: 400px;
+
   pointer-events: none;
 }
 /* Container Flower 2 */
@@ -401,16 +399,15 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 400px; 
-  height: 400px; 
+  width: 400px;
+  height: 400px;
   pointer-events: none;
-  z-index: 1; 
+  z-index: 1;
 }
-
 
 #vektor_flower_2 img {
   position: absolute;
-  width: 100%; 
+  width: 100%;
 }
 
 /* Custom posisi masing-masing part flower */
@@ -442,10 +439,21 @@
   width: 300px;
   height: 300px;
 }
+
 /* vektor flower end */
+
+/* extras (dragonfly) start */
+#vektor_dragonfly_2 {
+  width: 100px;
+}
+/* extras (dragonfly)  end*/
 
 #time-countdown {
   background-color: var(--primaryOrange);
   z-index: 6;
 }
-/* content-secondary end */
+/* content-2 end */
+
+/* content-3 start */
+
+/* content-3 end */
