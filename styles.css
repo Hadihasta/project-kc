@@ -735,26 +735,31 @@ background-color: var(--primaryOrange);
 /* animate start  */
 
 .animate-wiggle {
-    animation: wiggleSoft 3.5s ease-in-out infinite;
-}
-
-@keyframes wiggleSoft {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(1.5deg); }
-    50% { transform: rotate(0deg); }
-    75% { transform: rotate(-1.5deg); }
-    100% { transform: rotate(0deg); }
-}
-
-.delay-1 { animation-delay: .5s; }
-.delay-2 { animation-delay: 1s; }
-.delay-3 { animation-delay: 1.8s; }
-
-.smooth-cycle {
-    --animate-duration: 4s;   /* gerakan pelan */
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out !important;
-    opacity: 0.95;
+    animation: wiggleSoft 6s ease-in-out infinite;
     transform-origin: center;
 }
+
+/* Pergerakan diperbesar dan lebih lembut */
+@keyframes wiggleSoft {
+    0%   { transform: rotate(0deg) scale(1); }
+    15%  { transform: rotate(1.5deg) scale(1.02); }
+    30%  { transform: rotate(-1deg) scale(1.01); }
+    50%  { transform: rotate(2deg) scale(1.03); }
+    70%  { transform: rotate(-1.2deg) scale(1.015); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+.delay-1 { animation-delay: 1s; }
+.delay-2 { animation-delay: 2s; }
+.delay-3 { animation-delay: 3s; }
+
+/* opsi tambahan jika ingin cycle sangat halus */
+.smooth-cycle {
+    --animate-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    opacity: 0.98;
+    transform-origin: center;
+}
+
 /* animate end */
