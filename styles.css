@@ -148,6 +148,15 @@
   #mobile_nav {
     display: none;
   }
+
+  /* #vektor_flower_2 img:nth-child(4) {
+     right: 7px !important;
+    rotate: 85deg;
+    z-index: 2;
+    top: 110px !important;
+  width: 400px !important;
+  height: 400px !important;
+} */
 }
 
 /* media query end  */
@@ -518,19 +527,19 @@
 
 #vektor_flower_1 {
   /* position: absolute; */
-  rotate: -20deg;
-  right: -182px;
-  top: -185px;
-  width: 400px;
-  pointer-events: none;
+     rotate: 6deg;
+    right: -617px;
+    top: -552px;
+    width: 1063px;
+    pointer-events: none;
 }
 /* Container Flower 2 */
 #vektor_flower_2 {
   position: absolute;
-  bottom: 0;
+ bottom: -452px;
   left: 0;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   pointer-events: none;
   z-index: 1;
 }
@@ -542,32 +551,32 @@
 
 /* Custom posisi masing-masing part flower */
 #vektor_flower_2 img:nth-child(1) {
-  right: 161px;
-  rotate: -73deg;
-  bottom: 40px;
-  z-index: 1;
+       right: 181px;
+    rotate: -90deg;
+    bottom: 224px;
+    z-index: 1;
 }
 
 #vektor_flower_2 img:nth-child(2) {
-  right: 137px;
-  z-index: 3;
-  top: 33px;
+    right: 137px;
+    z-index: 3;
+    top: -89px;
 }
 
 #vektor_flower_2 img:nth-child(3) {
-  right: 140px;
-  bottom: -33px;
-  rotate: 30deg;
-  z-index: 2;
+      right: 128px;
+    bottom: 95px;
+    rotate: 30deg;
+    z-index: 2;
 }
 
 #vektor_flower_2 img:nth-child(4) {
-  right: 80px;
-  rotate: 85deg;
-  z-index: 2;
-  top: 204px;
-  width: 300px;
-  height: 300px;
+    right: 40px;
+    rotate: 85deg;
+    z-index: 2;
+    top: 123px;
+    width: 400px;
+    height: 400px;
 }
 
 /* vektor flower end */
@@ -721,3 +730,31 @@ background-color: var(--primaryOrange);
 }
 
 /* content-5 end */
+
+
+/* animate start  */
+
+.animate-wiggle {
+    animation: wiggleSoft 3.5s ease-in-out infinite;
+}
+
+@keyframes wiggleSoft {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(1.5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-1.5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.delay-1 { animation-delay: .5s; }
+.delay-2 { animation-delay: 1s; }
+.delay-3 { animation-delay: 1.8s; }
+
+.smooth-cycle {
+    --animate-duration: 4s;   /* gerakan pelan */
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out !important;
+    opacity: 0.95;
+    transform-origin: center;
+}
+/* animate end */
