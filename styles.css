@@ -78,36 +78,35 @@
 
 /* mobile */
 @media (max-width: 480px) {
-    /* section 2 */
-    .adjustment_section_2{
-      max-width: 250px;
-    }
+  /* section 2 */
+  .adjustment_section_2 {
+    max-width: 250px;
+  }
 
+  /* timer */
 
-    /* timer */
+  #date {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
 
-      #date {
-        font-size: 1rem;
-        margin-bottom: 10px;
-    }
+  #timer {
+    gap: 10px;
+  }
 
-    #timer {
-        gap: 10px;
-    }
+  #timer > div {
+    min-width: 65px;
+    padding: 10px 12px;
+    border-radius: 10px;
+  }
 
-    #timer > div {
-        min-width: 65px;
-        padding: 10px 12px;
-        border-radius: 10px;
-    }
+  #timer > div > div:first-child {
+    font-size: 1.3rem;
+  }
 
-    #timer > div > div:first-child {
-        font-size: 1.3rem;
-    }
-
-    #timer > div > div:last-child {
-        font-size: 0.75rem;
-    }
+  #timer > div > div:last-child {
+    font-size: 0.75rem;
+  }
 }
 
 /* tablet */
@@ -118,42 +117,37 @@
     max-width: 800px;
   }
 
- 
   .logo-kc_chocolate {
     max-height: 200px;
   }
 
-  .fs-lg-25{
+  .fs-lg-25 {
     font-size: 25px !important;
   }
 
-    #timer {
-        gap: 14px;
-    }
+  #timer {
+    gap: 14px;
+  }
 
-    #timer > div {
-        min-width: 75px;
-    }
+  #timer > div {
+    min-width: 75px;
+  }
 
   /* section 2 */
 
-
   /* section 3 */
-   #image_place_1 img,
-    #image_place_2 img {
-        width: 750px !important;     /* bigger on larger screens */
-    }
+  #image_place_1 img,
+  #image_place_2 img {
+    width: 750px !important; /* bigger on larger screens */
+  }
 
+  .fs-100-lg {
+    font-size: 100px !important ;
+  }
 
-    .fs-100-lg {
-  font-size: 100px !important ;
-  
-}
-
- .fs-45-lg {
-  font-size: 45px !important ;
-  
-}
+  .fs-45-lg {
+    font-size: 45px !important ;
+  }
   /* section 3 */
 }
 
@@ -162,7 +156,6 @@
   #mobile_nav {
     display: none;
   }
-
 }
 
 /* media query end  */
@@ -228,30 +221,30 @@
 }
 
 .text-group {
-    line-height: 1.1; /* lebih rapat */
-    margin-bottom: 12px; /* beri jarak antar kelompok */
+  line-height: 1.1; /* lebih rapat */
+  margin-bottom: 12px; /* beri jarak antar kelompok */
 }
 
-.flex-col-vertical-center{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  
-    align-items: center;
-    min-height: 100vh;
-    padding-top: 10em;   
-    padding-bottom: 10em; 
-    gap: 4em;
+.flex-col-vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 10em;
+  padding-bottom: 10em;
+  gap: 4em;
 }
 
-.h-100{
-    height: 100% !important;
+.h-100 {
+  height: 100% !important;
 }
 
 .column-vertical-spread {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* atau space-evenly */
-    height: 100%;                   /* penting! */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* atau space-evenly */
+  height: 100%; /* penting! */
 }
 
 .min-h-screen {
@@ -263,10 +256,9 @@
   position: absolute;
 }
 
-
 /* gap */
-.gap-8{
-    gap:16px
+.gap-8 {
+  gap: 16px;
 }
 
 /* === utils ===*/
@@ -322,9 +314,6 @@
   font-weight: 100;
 }
 
-
-
-
 /* font weight */
 
 .font-semibold {
@@ -334,8 +323,8 @@
   font-weight: 700;
 }
 
-.put-front{
- z-index: 999999;
+.put-front {
+  z-index: 999999;
 }
 /* base end */
 
@@ -576,23 +565,23 @@
 }
 
 /* logo */
-  .logo-kc_chocolate {
-    max-height: 180px;
-  }
+.logo-kc_chocolate {
+  max-height: 180px;
+}
 /* vektor flower start */
 
 #vektor_flower_1 {
   /* position: absolute; */
-     rotate: 6deg;
-    right: -617px;
-    top: -552px;
-    width: 1063px;
-    pointer-events: none;
+  rotate: 6deg;
+  right: -617px;
+  top: -552px;
+  width: 1063px;
+  pointer-events: none;
 }
 /* Container Flower 2 */
 #vektor_flower_2 {
   position: absolute;
- bottom: -452px;
+  bottom: -452px;
   left: 0;
   width: 500px;
   height: 500px;
@@ -607,32 +596,32 @@
 
 /* Custom posisi masing-masing part flower */
 #vektor_flower_2 img:nth-child(1) {
-       right: 181px;
-    rotate: -90deg;
-    bottom: 224px;
-    z-index: 1;
+  right: 181px;
+  rotate: -90deg;
+  bottom: 224px;
+  z-index: 1;
 }
 
 #vektor_flower_2 img:nth-child(2) {
-    right: 137px;
-    z-index: 3;
-    top: -89px;
+  right: 137px;
+  z-index: 3;
+  top: -89px;
 }
 
 #vektor_flower_2 img:nth-child(3) {
-      right: 128px;
-    bottom: 95px;
-    rotate: 30deg;
-    z-index: 2;
+  right: 128px;
+  bottom: 95px;
+  rotate: 30deg;
+  z-index: 2;
 }
 
 #vektor_flower_2 img:nth-child(4) {
-    right: 40px;
-    rotate: 85deg;
-    z-index: 2;
-    top: 123px;
-    width: 400px;
-    height: 400px;
+  right: 40px;
+  rotate: 85deg;
+  z-index: 2;
+  top: 123px;
+  width: 400px;
+  height: 400px;
 }
 
 /* vektor flower end */
@@ -658,50 +647,48 @@
 
 /* TIMER */
 #time-countdown {
-background-color: var(--primaryOrange);
- z-index: 6;
- padding: 20px 0;
- text-align: center;
+  background-color: var(--primaryOrange);
+  z-index: 6;
+  padding: 20px 0;
+  text-align: center;
 }
 
 #date {
-    font-weight: 600;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
 }
 
 /* container angka */
 #timer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-    /* flex-wrap: wrap; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  /* flex-wrap: wrap; */
 }
 
 /* setiap kotak */
 #timer > div {
-    background: white;
-    padding: 5px 10px;
-    border-radius: 12px;
-    min-width: 70px;
-    text-align: center;
-    box-shadow: 0px 3px 10px rgba(0,0,0,0.15);
+  background: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  min-width: 70px;
+  text-align: center;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* angka */
 #timer > div > div:first-child {
-    font-size: 1.4rem;
-    font-weight: 400;
-    margin-bottom: 5px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 5px;
 }
 
 /* label (days/hours/etc) */
 #timer > div > div:last-child {
-    font-size: 0.85rem;
-  
+  font-size: 0.85rem;
 }
-
 
 /* TIMER */
 /* content-2 end */
@@ -714,23 +701,22 @@ background-color: var(--primaryOrange);
 }
 
 #vektor_flower_section_3 img {
-    position: absolute;
-    width: 1300px;
-    right: -769px;
-    top: -262px;
-    pointer-events: none;
+  position: absolute;
+  width: 1300px;
+  right: -769px;
+  top: -262px;
+  pointer-events: none;
 }
 
 #image_place_1 img {
   width: 720px;
 }
 
-
 #image_place_1 img,
 #image_place_2 img {
-    width: 250px;         
-    max-width: 100%;      
-    height: auto;
+  width: 250px;
+  max-width: 100%;
+  height: auto;
 }
 
 .text-group {
@@ -740,33 +726,31 @@ background-color: var(--primaryOrange);
   align-items: center;
 }
 
-
 .navigate-btn {
-    background-color: #dfb97b;      
-    color: #fff;
-    padding: 4px 20px;
-    border-radius: 10px;              
-    font-style: italic;
-    font-size: 16px;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;                        
-    transition: 0.2s ease;
+  background-color: #dfb97b;
+  color: #fff;
+  padding: 4px 20px;
+  border-radius: 10px;
+  font-style: italic;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.2s ease;
 }
 
 .navigate-btn:hover {
-    background-color: #c09052;        
-    color: #fff;
-    text-decoration: none;
+  background-color: #c09052;
+  color: #fff;
+  text-decoration: none;
 }
 
 .icon-map {
-    width: 32px;   /* icon lebih besar */
-    height: 32px;  /* tinggi sama -> tidak gepeng */
-    object-fit: contain;
+  width: 32px; /* icon lebih besar */
+  height: 32px; /* tinggi sama -> tidak gepeng */
+  object-fit: contain;
 }
-
 
 #vektor_flower_3 {
   position: absolute;
@@ -784,41 +768,98 @@ background-color: var(--primaryOrange);
 }
 
 #vektor_flower_3 img:nth-child(1) {
+  right: -400px;
+  bottom: 468px;
+  z-index: 1;
+  rotate: -3deg;
+  width: 1000px;
+}
+
+#vektor_flower_3 img:nth-child(2) {
   right: -257px;
-    bottom: 576px;
-    z-index: 1;
-    rotate: -3deg;
-    width: 1000px;
+  bottom: 576px;
+  z-index: 1;
+  rotate: -3deg;
+  width: 1000px;
 }
 
- #vektor_flower_3 img:nth-child(2) {
-   right: -213px;
-    bottom: 323px;
-    z-index: 2;
-    width: 900px;
+#vektor_flower_3 img:nth-child(3) {
+  right: -213px;
+  bottom: 323px;
+  z-index: 2;
+  width: 900px;
 }
 
- #vektor_flower_3 img:nth-child(3) {
-    right: -289px;
-    bottom: 96px;
-    z-index: 3;
-    width: 1000px;
-}
-
- #vektor_flower_3 img:nth-child(4) {
-      right: -376px;
-    bottom: -70px;
-    z-index: 4;
-    width: 1000px;
+#vektor_flower_3 img:nth-child(4) {
+  right: -289px;
+  bottom: 96px;
+  z-index: 3;
+  width: 1000px;
 }
 
 #vektor_flower_3 img:nth-child(5) {
-     right: -383px;
-    bottom: -444px;
-    z-index: 0;
-    width: 1300px;
-    rotate: -24deg;
-}   
+  right: -376px;
+  bottom: -70px;
+  z-index: 4;
+  width: 1000px;
+}
+
+#vektor_flower_3 img:nth-child(6) {
+  right: -383px;
+  bottom: -444px;
+  z-index: 0;
+  width: 1300px;
+  rotate: -24deg;
+}
+
+#vektor_flower_3_2 {
+  left: -244px;
+  bottom: 0px;
+  width: 500px;
+  height: 500px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#vektor_flower_3_2 img {
+  position: absolute;
+  width: 100%;
+}
+
+#vektor_flower_3_2 img:nth-child(1) {
+    right: -241px;
+    bottom: -171px;
+    z-index: 1;
+    width: 800px;
+}
+
+#vektor_flower_3_2 img:nth-child(2) {
+  right: -79px;
+  bottom: -66px;
+  z-index: 1;
+  width: 1000px;
+}
+#vektor_flower_3_2 img:nth-child(3) {
+  right: -181px;
+  bottom: -263px;
+  z-index: 3;
+  width: 1000px;
+}
+
+#vektor_flower_3_2 img:nth-child(4) {
+     right: -610px;
+    bottom: -223px;
+    z-index: 1;
+    width: 1068px;
+}
+
+#vektor_flower_3_2 img:nth-child(5) {
+  right: -320px;
+  bottom: -252px;
+  z-index: 2;
+  width: 800px;
+}
+
 /* content-3 end */
 
 /* swiper start */
@@ -871,35 +912,52 @@ background-color: var(--primaryOrange);
 
 /* content-5 end */
 
-
 /* animate start  */
 
 .animate-wiggle {
-    animation: wiggleSoft 6s ease-in-out infinite;
-    transform-origin: center;
+  animation: wiggleSoft 6s ease-in-out infinite;
+  transform-origin: center;
 }
 
 /* Pergerakan diperbesar dan lebih lembut */
 @keyframes wiggleSoft {
-    0%   { transform: rotate(0deg) scale(1); }
-    15%  { transform: rotate(1.5deg) scale(1.02); }
-    30%  { transform: rotate(-1deg) scale(1.01); }
-    50%  { transform: rotate(2deg) scale(1.03); }
-    70%  { transform: rotate(-1.2deg) scale(1.015); }
-    100% { transform: rotate(0deg) scale(1); }
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  15% {
+    transform: rotate(1.5deg) scale(1.02);
+  }
+  30% {
+    transform: rotate(-1deg) scale(1.01);
+  }
+  50% {
+    transform: rotate(2deg) scale(1.03);
+  }
+  70% {
+    transform: rotate(-1.2deg) scale(1.015);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
 }
 
-.delay-1 { animation-delay: 1s; }
-.delay-2 { animation-delay: 2s; }
-.delay-3 { animation-delay: 3s; }
+.delay-1 {
+  animation-delay: 1s;
+}
+.delay-2 {
+  animation-delay: 2s;
+}
+.delay-3 {
+  animation-delay: 3s;
+}
 
 /* opsi tambahan jika ingin cycle sangat halus */
 .smooth-cycle {
-    --animate-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    opacity: 0.98;
-    transform-origin: center;
+  --animate-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  opacity: 0.98;
+  transform-origin: center;
 }
 
 /* animate end */
