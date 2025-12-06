@@ -11,423 +11,26 @@
     <!--  AOS (Animate on Scroll) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
     <!-- SWIPER.JS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <!--Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+   <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <!-- Fancybox (requires jQuery) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
+    <link rel="stylesheet" href="styles.css">
 
-    <style>
-        /* html, body {
-    overflow-x: hidden !important;
-} */
-        /* import font */
-
-        /* Aerotis */
-        @font-face {
-            font-family: "Aerotis";
-            src: url("Fonts/Aerotis.ttf") format("truetype");
-            font-display: swap;
-        }
-
-        /* Aureligena */
-        @font-face {
-            font-family: "Aureligena";
-            src: url("Fonts/Aureligena.ttf") format("truetype");
-            font-display: swap;
-        }
-
-        /* Candlefish */
-        @font-face {
-            font-family: "Candlefish";
-            src: url("Fonts/Candlefish.ttf") format("truetype");
-            font-display: swap;
-        }
-
-        /* Minion Variable Concept Roman (variable font – normal) */
-        @font-face {
-            font-family: "MinionVariable";
-            src: url("Fonts/MinionVariableConcept-Roman.otf") format("opentype");
-            font-weight: 100 900;
-            font-style: normal;
-            font-display: swap;
-        }
-
-        /* Minion Variable Concept Italic (variable font – italic) */
-        @font-face {
-            font-family: "MinionVariable";
-            src: url("Fonts/MinionVariableConcept-Italic.otf") format("opentype");
-            font-weight: 100 900;
-            font-style: italic;
-            font-display: swap;
-        }
-
-        /* Myriad Pro Regular */
-        @font-face {
-            font-family: "MyriadPro";
-            src: url("Fonts/MyriadPro-Regular.otf") format("opentype");
-            font-display: swap;
-        }
-
-        /* Times New Roman */
-        @font-face {
-            font-family: "TimesNewRoman";
-            src: url("Fonts/Times New Roman.ttf") format("truetype");
-            font-display: swap;
-        }
-
-
-
-        /* root  */
-
-        :root {
-            --font-aerotis: "Aerotis";
-            --font-aureligena: "Aureligena";
-            --font-candlefish: "Candlefish";
-            --font-minion: "MinionVariable";
-            --font-myriad: "MyriadPro";
-            --font-tnr: "TimesNewRoman";
-
-
-            --main-font: "Poppins", sans-serif;
-            --title-font: "Cormorant Garamond", serif;
-            --primaryOrange: #DFB97B;
-            --secondaryOrange: #C09052;
-            --primaryChocolate: #AD8B71;
-            --secondaryOrange: #7B6557;
-        }
-
-        /* media query start  */
-
-        /* mobile */
-        @media (max-width: 480px) {}
-
-        /* dekstop */
-        @media (min-width: 992px) {
-            #mobile_nav {
-                display: none;
-            }
-
-
-        }
-
-        /* media query end  */
-
-
-        /* base css  */
-
-        .nowrap {
-            white-space: nowrap;
-        }
-
-        .flex-col-center {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .flex-row-center {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .min-h-screen {
-            min-height: 100vh;
-            object-fit: cover;
-        }
-
-        .absolute {
-            position: absolute;
-        }
-
-        /* base end */
-
-        /* Hamburger animation start */
-
-        #mobile_nav,
-        .hamburger,
-        #sidebar {
-            position: relative;
-            /* z index hamburger 9999 agar di atas filter hitam dan semua component yang ada (vektor, gambar, dll) */
-            z-index: 9999;
-        }
-
-
-        .hamburger {
-            margin-left: 20px;
-            margin-top: 20px;
-            width: 30px;
-            height: 22px;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-
-            cursor: pointer;
-            transition: all .3s ease;
-        }
-
-        .hamburger span {
-            position: absolute;
-            height: 3px;
-            width: 100%;
-            background: #6d4a3b;
-            left: 0;
-            transition: .3s;
-        }
-
-        .hamburger span:nth-child(1) {
-            top: 0;
-            background: var(--primaryOrange);
-        }
-
-        .hamburger span:nth-child(2) {
-            top: 9px;
-            background: var(--primaryOrange);
-        }
-
-        .hamburger span:nth-child(3) {
-            top: 18px;
-            background: var(--primaryOrange);
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg);
-            top: 10px;
-            background: var(--secondaryOrange);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg);
-            top: 10px;
-            background: var(--secondaryOrange);
-        }
-
-
-        /* Hamburger animation end */
-
-
-        /* sidebar start */
-
-        #sidebar {
-            /* font-family: var(--title-font); */
-            margin-left: 20px;
-            margin-top: 20px;
-            position: fixed;
-            top: 0;
-            /* hidden */
-            display: none;
-            width: 260px;
-            /* height: 100%; */
-            background: white;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, .2);
-            /* side bar z index berada di bawah hamburger 1 tingkat 9999-1 */
-            z-index: 9998;
-        }
-
-        #sidebar.open {
-            display: block;
-        }
-
-
-        /* sidebar end */
-
-
-        /* Navbar start */
-        /* Desktop Navbar Style */
-        #dekstop_nav {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: 9998;
-        }
-
-        /* Hilangkan background Bootstrap */
-        #dekstop_nav nav {
-            background: transparent !important;
-        }
-
-        /* Remove default .nav-link coloring */
-        #dekstop_nav .nav-link {
-            font-family: var(--font-minion);
-            font-size: 14px;
-            color: white !important;
-            letter-spacing: 2px;
-            margin: 0 12px;
-            font-weight: 300;
-            position: relative;
-            transition: 0.3s ease;
-        }
-
-        /* Bold on hover */
-        #dekstop_nav .nav-link:hover {
-            font-weight: 600;
-            color: white !important;
-        }
-
-        /* Small dot underline */
-        #dekstop_nav .nav-link::after {
-            content: "";
-            position: absolute;
-            bottom: -6px;
-            /* distance from text */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 6px;
-            height: 6px;
-            background: white;
-            border-radius: 50%;
-            opacity: 0;
-            transition: 0.3s ease;
-        }
-
-        /* Show the dot on hover */
-        #dekstop_nav .nav-link:hover::after {
-            opacity: 1;
-        }
-
-        /* Navbar end */
-
-
-
-        /* MENU LIST STYLE */
-        .header-menu {
-            font-family: var(--title-font);
-            background-color: var(--primaryOrange);
-            color: white;
-            padding: 18px;
-            font-weight: 600;
-            font-size: 18px;
-            text-align: center;
-        }
-
-        .menu-list a {
-            padding: 14px 20px;
-            display: block;
-            font-size: 14px;
-            color: #333;
-            text-decoration: none;
-        }
-
-        .menu-list a:hover {
-            background: #f3f3f3;
-        }
-
-        /* sidebar end */
-
-
-        /* content-main  start*/
-
-        .background-image {
-            position: relative;
-        }
-
-
-        .background-image img {
-            width: 100%;
-            height: auto;
-            /* min-height: 100vh; */
-            display: block;
-        }
-
-
-
-
-        .bg-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, .45);
-            /* z index overlay filter hitam 1 */
-            z-index: 1;
-        }
-
-
-        #content-main {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            z-index: 5;
-            white-space: nowrap;
-            gap: clamp(20px, 6vw, 60px);
-
-        }
-
-        /* content-main  end*/
-
-        /* content-secondary start */
-
-        #section_2 {
-            overflow-x: hidden !important;
-        }
-
-        .bg-overlay_orange {
-            position: absolute;
-
-            width: 100%;
-            height: 100%;
-            background: rgba(233, 185, 123, .15);
-            /* z index overlay filter hitam 1 */
-            z-index: 1;
-        }
-
-        #content-secondary {
-            width: 100%;
-            position: absolute;
-            /* top: 50%;
-            left: 50%; */
-            /* transform: translate(-50%, -50%); */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            /* text-align: center; */
-            /* color: white; */
-            z-index: 5;
-            /* white-space: nowrap; */
-            /* gap: clamp(20px, 6vw, 60px); */
-
-        }
-
-
-        /* vektor flower start */
-        #vektor_flower_1 {
-            position: absolute;
-            right: -200px;
-            top: -153px;
-            width: 500px;
-            pointer-events: none;
-        }
-
-        /* vektor flower end */
-
-        /* content-secondary end */
-    </style>
 
 </head>
 
 <body>
     <!-- page -->
     <div>
-        <!-- section 1 -->
 
 
+        <!-- HEAD START -->
         <div id="mobile_nav">
             <div id="menuBtn" class="hamburger ">
                 <span></span><span></span><span></span>
@@ -466,9 +69,9 @@
                 </div>
             </nav>
         </div>
+        <!-- HEAD END -->
 
-
-
+        <!--  CONTENT START -->
         <div id="section_1" class="background-image">
             <img src="uploads/main-section.png" class="min-h-screen" alt="main-section">
             <div id="content-main">
@@ -487,53 +90,339 @@
         </div>
 
 
-        <div id="section_2" class="min-h-screen bg-primaryChocolate ">
+        <div id="section_2" class="min-h-screen font-minion">
 
-            <div id="vektor_flower_1" class="position-relative ">
-                <img src="uploads/vektor/Flower_1.svg" alt="flower_1" class="absolute  ">
+            <div id="vektor_flower_1" class="position-absolute " data-aos="fade-left">
+                <img src="uploads/vektor/Flower_1.svg" alt="flower_1" class="animate-wiggle">
             </div>
 
 
-            <div class="bg-overlay_orange"></div>
-            <!-- need to reposition  -->
-            <div id="vektor_flower_2" class="position-relative ">
-                <img src="uploads/vektor/Flower_2_part_1.svg" alt="flower_1" class="absolute">
-                <img src="uploads/vektor/Flower_2_part_2.svg" alt="flower_1" class="absolute">
-                <img src="uploads/vektor/Flower_2_part_3.svg" alt="flower_1" class="absolute">
-                <img src="uploads/vektor/Flower_2_part_4.svg" alt="flower_1" class="absolute">
+            <div class="bg-overlay_orange">
+                <!-- need to reposition  -->
+                <div id="vektor_flower_2" class="position-relative "
+                    data-aos="fade-right">
+                    <img src="uploads/vektor/Flower_2_part_1.svg" alt="flower_2 f1  " class="animate-wiggle delay-2">
+                    <img src="uploads/vektor/Flower_2_part_2.svg" alt="flower_2 f2" class="animate-wiggle delay-1">
+                    <img src="uploads/vektor/Flower_2_part_3.svg" alt="flower_2 f3" class=" animate-wiggle ">
+                    <img src="uploads/vektor/Flower_2_part_4.svg" alt="flower_2 f4" class=" animate-wiggle delay-3 ">
+                </div>
             </div>
+
+
 
             <div id="content-secondary">
-                <!-- logo -->
-                <img src="uploads/icon/logo-KC_chocolate.svg" alt="logo-kc" class="logo-kc  w-25">
-                <!-- text -->
-                <div id="text_group" class="flex-col-center nowrap">
-                    <span>By the grace of God,</span>
-                    <span>MR. SUDIANTO & MRS. MIMI</span>
-                    <span>together with</span>
-                    <span>Ir. Paulus Wiranto Jodhinata & Ira Winarti S.H.</span>
-                    <span>cordially request the honor of your presence</span>
-                    <span>at the marriage of our children</span>
+
+                <div class="adjustment_section_2 d-flex flex-column lg-vh-90 vh-85 ">
+                    <!-- logo -->
+                    <img src="uploads/icon/logo-KC_chocolate.svg" alt="logo-kc"
+                        class=" logo-kc_chocolate align-self-center  w-15">
+                    <!-- text -->
+                    <div id="text_group" class="flex-col-center nowrap fs-lg-25 fs-20 ">
+                        <span class=" text-secondaryChocolate font-italic ">By the grace of God,</span>
+                        <span class="text-secodaryOrange font-semibold">MR. SUDIANTO & MRS. MIMI</span>
+                        <span class="text-secondaryChocolate font-italic">together with</span>
+                        <span class="text-secodaryOrange font-semibold">Ir. Paulus Wiranto Jodhinata & Ira Winarti
+                            S.H.</span>
+                        <span class="text-secondaryChocolate font-italic">cordially request the honor of your
+                            presence</span>
+                        <span class="text-secondaryChocolate font-italic">at the marriage of our children</span>
+                    </div>
+                    <!-- potrait and name -->
+                    <div id="potrait_name" class="position-relative py-4" style="z-index: 999999;">
+                        <div
+                            class="group-potrait_section_2 d-flex justify-content-center align-items-center gap-3 position-relative">
+
+                            <!-- Dragonfly -->
+                            <div id="vektor_dragonfly_2" class="position-absolute">
+                                <img src="uploads/vektor/dragonfly_section_2.gif" alt="dragonfly_2" class="img-fluid"
+                                    style="max-width:80px;">
+                            </div>
+
+                            <!-- Portrait 1 -->
+                            <img src="uploads/photo/Kelvin-potrait_name.svg" alt="Portrait Kelvin" class="img-fluid"
+                                style="max-width:25%; min-width:200px;">
+
+
+                            <img src="uploads/photo/section_2/&.svg" alt="Portrait Cynthia" class="img-fluid"
+                                style="max-width:5%; min-width:40px;">
+
+                            <!-- Portrait 2 -->
+                            <img src="uploads/photo/Cynthia-potrait_name.svg" alt="Portrait Cynthia" class="img-fluid"
+                                style="max-width:25%; min-width:200px;">
+                        </div>
+                    </div>
+                    <!-- text -->
+                    <div id="text_group_2" class="flex-col-center nowrap " style="z-index: 9999999;">
+                        <span class="text-secondaryChocolate font-italic">Our joy will be complete with your presence
+                            and
+                        </span>
+                        <span class="text-secondaryChocolate font-italic">blessings at our celebration of love.</span>
+
+                    </div>
                 </div>
-                <!-- potrait and name -->
-                <div id="potrait_name" class="flex-row-center nowrap">
-                    <img src="uploads/photo/Kelvin-potrait_name.svg" alt="logo-kc" class="logo-kc  w-25">
 
-                    <span> & </span>
 
-                    <img src="uploads/photo/Cynthia-potrait_name.svg" alt="logo-kc" class="logo-kc  w-25">
-                </div>
-                <!-- text -->
-                <div id="text_group_2" class="flex-col-center nowrap">
-                    <span>Our joy will be complete with your presence and
-                    </span>
-                    <span>blessings at our celebration of love.</span>
 
+                <div id="time-countdown"
+                    class="relative lg-vh-10 vh-15 w-100 d-flex flex-column  justify-content-center  align-items-center ">
+
+                    <div id="vektor_butterfly_2" class="position-absolute">
+                        <img src="uploads/vektor/butterfly_section_2.gif" alt="dragonfly_2">
+                    </div>
+
+                    <div id="date font-minion " class="font-minion fs-25 fs-lg-40 mb-2">
+                        SATURDAY, 28 JUNE 2025
+                    </div>
+
+                    <div id="timer" class=" flex-row-center">
+                        <div class="days">
+                            <div>22</div>
+                            <div>Days</div>
+                        </div>
+
+                        <div class="hours">
+                            <div>15</div>
+                            <div>Hours</div>
+                        </div>
+
+                        <div class="minutes">
+                            <div>12</div>
+                            <div>Minutes</div>
+                        </div>
+
+                        <div class="seconds">
+                            <div>33</div>
+                            <div>Seconds</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
+
+
+        <div id="section_3" class="min-h-screen ">
+            <div id="vektor_flower_section_3" class="position-absolute">
+                <img src="uploads/vektor/section_3/Flower_3.svg" alt="flower_1">
+            </div>
+
+
+            <div class="bg-overlay_orange">
+                <!-- need to reposition  -->
+                <!-- <div id="vektor_flower_2" class="position-absolute ">
+                    <img src="uploads/vektor/Flower_2_part_1.svg" alt="flower_2 f1">
+                    <img src="uploads/vektor/Flower_2_part_2.svg" alt="flower_2 f2">
+                    <img src="uploads/vektor/Flower_2_part_3.svg" alt="flower_2 f3">
+                    <img src="uploads/vektor/Flower_2_part_4.svg" alt="flower_2 f4">
+                </div> -->
+            </div>
+
+
+            <div id="section_main_3" class="d-flex flex-column">
+                <div class="flex-col-center">
+                    <h2>Location</h2>
+
+                    <div id="image_place_1">
+                        <img src="uploads/vektor/section_3/gereja.png" alt="place_1">
+                    </div>
+
+                    <div id="text_location_group" class=" flex-col-center">
+                        <div>Holy Matrimony</div>
+                        <div>10 AM</div>
+                        <div>ST. URSULA’S CHAPEL</div>
+                        <div>(Enter & park at Santa Ursula Elementary School)</div>
+                        <div>Jl. Pos no. 2, Pasar Baru,</div>
+                        <div>Sawah Besar, Jakarta Pusat</div>
+                    </div>
+
+
+
+                    <div id="image_place_2">
+                        <img src="uploads/vektor/section_3/RAFFLES.png" alt="place_2">
+                    </div>
+                </div>
+
+
+                <div class=" d-flex  justify-content-center align-items-center row">
+                    <!--  -->
+                    <div class="col flex-col-center">
+                        <div class="text-group">
+                            <div>WEDDING</div>
+                            <div>RECEPTION</div>
+                        </div>
+
+                        <div class="text-group">
+                            <div>6.30 PM</div>
+                            <div>RAFFLES HOTEL</div>
+                            <div>JAKARTA</div>
+                        </div>
+
+
+                        <div class="text-group">
+                            <div>(DIAN BALLROOM 11th FLOOR)</div>
+                            <div>Jl. Prof. DR. Satrio Kav. 3-5, Karet Kuningan,</div>
+                            <div>Setiabudi, Jakarta Selatan</div>
+                        </div>
+
+
+                        <button>Navigate to Location</button>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <div class="col flex-col-center">
+                        <div class="text-group">
+                            <div>AFTER</div>
+                            <div>PARTY</div>
+                        </div>
+
+                        <div class="text-group">
+                            <div>10 PM</div>
+                            <div>RAFFLES HOTEL</div>
+                            <div>JAKARTA</div>
+                        </div>
+
+
+                        <div class="text-group">
+                            <div>(DJAKARTA ROOM 2ND FLOOR)</div>
+                            <div>Jl. Prof. DR. Satrio Kav. 3-5, Karet Kuningan,
+                            </div>
+                            <div>Setiabudi, Jakarta Selatan
+                            </div>
+                        </div>
+
+
+                        <button>Navigate to Location</button>
+
+                    </div>
+                    <!--  -->
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="uploads/photo//swiper/photograph_1.jpeg" alt="photo_1 ">
+                </div>
+                <div class="swiper-slide">
+                    <img src="uploads/photo//swiper/photograph_2.jpeg" alt="photo_1 ">
+                </div>
+                <div class="swiper-slide">
+                    <img src="uploads/photo//swiper/photograph_3.jpeg" alt="photo_1 ">
+                </div>
+                <div class="swiper-slide">
+                    <img src="uploads/photo//swiper/photograph_4.jpeg" alt="photo_1 ">
+                </div>
+                <div class="swiper-slide">
+                    <img src="uploads/photo//swiper/photograph_5.jpeg" alt="photo_1 ">
+                </div>
+
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+
+
+        <div id="section_4" class="min-h-screen">
+
+            <div class="bg-overlay_orange">
+            </div>
+
+            <div id="rsvp" class="flex-col-center">
+                <div>RSVP</div>
+                <div>Please confirm your attendance</div>
+                <div>before 5 June 2025</div>
+
+                <div>
+                    <div>attending</div>
+                    <div>Not Atending</div>
+                </div>
+
+                <div>Choose the event(s) you will be attending</div>
+
+                <div>
+                    <div>Holy Matrimony</div>
+                    <div>Wedding Reception</div>
+                    <div>Both</div>
+                </div>
+
+                <div>Number of people attending</div>
+
+                <div>
+                    <div>
+                        <div>Holy Matrimony</div>
+                        <div>Dropdown</div>
+                    </div>
+                    <div>
+                        <div>WeddingReception</div>
+                        <div>Dropdown</div>
+                    </div>
+                </div>
+
+                <div>Will you attend the after party?</div>
+
+                <div>
+                    <div>Yes</div>
+                    <div>No</div>
+                </div>
+
+                <div>Do you wish to proceed?</div>
+
+                <div>
+                    <div>Submit</div>
+                </div>
+
+
+            </div>
+
+
+            <div id="dress-code" class="flex-col-center">
+
+                <div>Dress Code</div>
+                <div>We kindly encourage our guest to wear these colours on our special day:</div>
+
+
+                <div id="detail-picture-dress-code" class="flex-row-center">
+                    <div class="flex-col-center">
+                        <div>HOLY MATRIMONY (White)</div>
+                        <div>picture</div>
+                    </div>
+
+
+                    <div class="flex-col-center">
+                        <div>WEDDING RECEPTION (Formal Black)
+                        </div>
+                        <div>picture</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="section_5" class="min-h-screen bg-primaryOrange">
+
+            <div id="Personal Message" class="vh-50">
+                <div>Personal Messsage</div>
+            </div>
+
+            <div id="landscape_closing">
+
+                <div id="closing_image" class="position-absolute">
+                    <img src="uploads/photo/section_5/background_section_5.svg" alt="gradient_picture">
+                </div>
+
+            </div>
+        </div>
+        <!--  CONTENT END -->
     </div>
+
+
 
 
 
@@ -549,35 +438,13 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     <!-- Fancybox -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
-    <script>
-        /*  INIT AOS  */
-        AOS.init();
 
-        /*  INIT SWIPER  */
-        var swiper = new Swiper(".mySwiper", { loop: true });
-
-        $("#menuBtn").on("click", function () {
-            // hamburger class
-            $(this).toggleClass("active");
-            // sidebar class
-            $("#sidebar").toggleClass("open");
-
-        });
-
-        $("#overlay").on("click", function () {
-            $("#menuBtn").removeClass("active");
-            $("#sidebar").removeClass("open");
-
-        });
-
-
-    </script>
-
+    <script src="script.js"></script>
 
 </body>
 

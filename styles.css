@@ -1,0 +1,765 @@
+/* html, body {
+    overflow-x: hidden !important;
+} */
+/* import font */
+
+/* Aerotis */
+@font-face {
+  font-family: 'Aerotis';
+  src: url('Fonts/Aerotis.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Aureligena */
+@font-face {
+  font-family: 'Aureligena';
+  src: url('Fonts/Aureligena.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Candlefish */
+@font-face {
+  font-family: 'Candlefish';
+  src: url('Fonts/Candlefish.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Minion Variable Concept Roman (variable font – normal) */
+@font-face {
+  font-family: 'MinionVariable';
+  src: url('Fonts/MinionVariableConcept-Roman.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Minion Variable Concept Italic (variable font – italic) */
+@font-face {
+  font-family: 'MinionVariable';
+  src: url('Fonts/MinionVariableConcept-Italic.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Myriad Pro Regular */
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('Fonts/MyriadPro-Regular.otf') format('opentype');
+  font-display: swap;
+}
+
+/* Times New Roman */
+@font-face {
+  font-family: 'TimesNewRoman';
+  src: url('Fonts/Times New Roman.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* root  */
+
+:root {
+  --font-aerotis: 'Aerotis';
+  --font-aureligena: 'Aureligena';
+  --font-candlefish: 'Candlefish';
+  --font-minion: 'MinionVariable';
+  --font-myriad: 'MyriadPro';
+  --font-tnr: 'TimesNewRoman';
+
+  --main-font: 'Poppins', sans-serif;
+  --title-font: 'Cormorant Garamond', serif;
+  --secondaryChocolate: #7b6557;
+  --primaryChocolate: #ad8b71;
+  --primaryOrange: #dfb97b;
+  --secondaryOrange: #c09052;
+}
+
+/* media query start  */
+
+/* mobile */
+@media (max-width: 480px) {
+    /* section 2 */
+    .adjustment_section_2{
+      max-width: 250px;
+    }
+
+
+    /* timer */
+
+      #date {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    #timer {
+        gap: 10px;
+    }
+
+    #timer > div {
+        min-width: 65px;
+        padding: 10px 12px;
+        border-radius: 10px;
+    }
+
+    #timer > div > div:first-child {
+        font-size: 1.3rem;
+    }
+
+    #timer > div > div:last-child {
+        font-size: 0.75rem;
+    }
+}
+
+/* tablet */
+
+/* section 2  */
+@media (min-width: 768px) {
+  .group-potrait_section_2 {
+    max-width: 800px;
+  }
+
+  /* .lg-vh-90{
+     height: 90vh !important;
+  }
+ .lg-vh-10{
+     height: 10vh !important;
+  } */
+  .logo-kc_chocolate {
+    max-height: 200px;
+  }
+
+  .fs-lg-25{
+    font-size: 25px !important;
+  }
+
+    #timer {
+        gap: 14px;
+    }
+
+    #timer > div {
+        min-width: 75px;
+    }
+
+  /* section 2 */
+}
+
+/* dekstop */
+@media (min-width: 992px) {
+  #mobile_nav {
+    display: none;
+  }
+
+  /* #vektor_flower_2 img:nth-child(4) {
+     right: 7px !important;
+    rotate: 85deg;
+    z-index: 2;
+    top: 110px !important;
+  width: 400px !important;
+  height: 400px !important;
+} */
+}
+
+/* media query end  */
+
+/* base css  */
+
+/* Height start  */
+.vh-5 {
+  height: 5vh;
+}
+
+.vh-10 {
+  height: 10vh;
+}
+
+.vh-15 {
+  height: 15vh;
+}
+
+.vh-20 {
+  height: 20vh;
+}
+
+.vh-50 {
+  height: 50vh;
+}
+.vh-85 {
+  height: 85vh;
+}
+
+.vh-80 {
+  height: 80vh;
+}
+
+.vh-90 {
+  height: 90vh;
+}
+
+/* Height start  End */
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+  object-fit: cover;
+}
+
+.absolute {
+  position: absolute;
+}
+
+/* === utils ===*/
+
+/* background */
+.bg-primaryOrange {
+  background-color: var(--primaryOrange);
+}
+
+/* font */
+.font-minion {
+  font-family: var(--font-minion);
+}
+
+.font-aerotis {
+  font-family: var(--font-aerotis);
+}
+/* font-color */
+.text-primaryOrange {
+  color: var(--primaryOrange);
+}
+
+.text-secodaryOrange {
+  color: var(--secondaryOrange);
+}
+.text-secondaryChocolate {
+  color: var(--secondaryChocolate);
+}
+
+.text-primaryChocolate {
+  color: var(--primaryChocolate);
+}
+/* font-size */
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+.fs-25 {
+  font-size: 25px;
+}
+
+.fs-60 {
+  font-size: 60px;
+  font-weight: 100;
+}
+
+/* font weight */
+
+.font-semibold {
+  font-weight: 600;
+}
+.font-bold {
+  font-weight: 700;
+}
+
+/* base end */
+
+/* Hamburger animation start */
+
+#mobile_nav,
+.hamburger,
+#sidebar {
+  position: relative;
+  /* z index hamburger 9999 agar di atas filter hitam dan semua component yang ada (vektor, gambar, dll) */
+  z-index: 9999;
+}
+
+.hamburger {
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 30px;
+  height: 22px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hamburger span {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #6d4a3b;
+  left: 0;
+  transition: 0.3s;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+  background: var(--primaryOrange);
+}
+
+.hamburger span:nth-child(2) {
+  top: 9px;
+  background: var(--primaryOrange);
+}
+
+.hamburger span:nth-child(3) {
+  top: 18px;
+  background: var(--primaryOrange);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+  background: var(--secondaryOrange);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 10px;
+  background: var(--secondaryOrange);
+}
+
+/* Hamburger animation end */
+
+/* sidebar start */
+
+#sidebar {
+  /* font-family: var(--title-font); */
+  margin-left: 20px;
+  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  /* hidden */
+  display: none;
+  width: 260px;
+  /* height: 100%; */
+  background: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  /* side bar z index berada di bawah hamburger 1 tingkat 9999-1 */
+  z-index: 9998;
+}
+
+#sidebar.open {
+  display: block;
+}
+
+/* sidebar end */
+
+/* Navbar start */
+/* Desktop Navbar Style */
+#dekstop_nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9998;
+}
+
+/* Hilangkan background Bootstrap */
+#dekstop_nav nav {
+  background: transparent !important;
+}
+
+/* Remove default .nav-link coloring */
+#dekstop_nav .nav-link {
+  font-family: var(--font-minion);
+  font-size: 14px;
+  color: white !important;
+  letter-spacing: 2px;
+  margin: 0 12px;
+  font-weight: 300;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+/* Bold on hover */
+#dekstop_nav .nav-link:hover {
+  font-weight: 600;
+  color: white !important;
+}
+
+/* Small dot underline */
+#dekstop_nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  /* distance from text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+/* Show the dot on hover */
+#dekstop_nav .nav-link:hover::after {
+  opacity: 1;
+}
+
+/* Navbar end */
+
+/* MENU LIST STYLE */
+.header-menu {
+  font-family: var(--title-font);
+  background-color: var(--primaryOrange);
+  color: white;
+  padding: 18px;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+
+.menu-list a {
+  padding: 14px 20px;
+  display: block;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu-list a:hover {
+  background: #f3f3f3;
+}
+
+/* sidebar end */
+
+/* content-1  start*/
+
+.background-image {
+  position: relative;
+}
+
+.background-image img {
+  width: 100%;
+  height: auto;
+  /* min-height: 100vh; */
+  display: block;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  /* z index overlay filter hitam 1 */
+  z-index: 1;
+}
+
+#content-main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  z-index: 5;
+  white-space: nowrap;
+  gap: clamp(20px, 6vw, 60px);
+}
+
+/* content-1  end*/
+
+/* content-2 start */
+
+#section_2 {
+  overflow: hidden !important;
+  position: relative;
+}
+
+.bg-overlay_orange {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  pointer-events: none; /* biar tidak ganggu klik */
+  z-index: 2; /* overlay di atas background */
+  overflow: visible !important; /* jangan potong child */
+  background: rgba(223, 185, 123, 0.05);
+}
+
+#content-secondary {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* logo */
+  .logo-kc_chocolate {
+    max-height: 180px;
+  }
+/* vektor flower start */
+
+#vektor_flower_1 {
+  /* position: absolute; */
+     rotate: 6deg;
+    right: -617px;
+    top: -552px;
+    width: 1063px;
+    pointer-events: none;
+}
+/* Container Flower 2 */
+#vektor_flower_2 {
+  position: absolute;
+ bottom: -452px;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#vektor_flower_2 img {
+  position: absolute;
+  width: 100%;
+}
+
+/* Custom posisi masing-masing part flower */
+#vektor_flower_2 img:nth-child(1) {
+       right: 181px;
+    rotate: -90deg;
+    bottom: 224px;
+    z-index: 1;
+}
+
+#vektor_flower_2 img:nth-child(2) {
+    right: 137px;
+    z-index: 3;
+    top: -89px;
+}
+
+#vektor_flower_2 img:nth-child(3) {
+      right: 128px;
+    bottom: 95px;
+    rotate: 30deg;
+    z-index: 2;
+}
+
+#vektor_flower_2 img:nth-child(4) {
+    right: 40px;
+    rotate: 85deg;
+    z-index: 2;
+    top: 123px;
+    width: 400px;
+    height: 400px;
+}
+
+/* vektor flower end */
+
+/* extras (dragonfly) start */
+#vektor_dragonfly_2 img {
+  position: relative;
+  width: 100px;
+  rotate: 45deg;
+  left: -176px;
+  top: -69px;
+}
+/* extras (dragonfly)  end*/
+
+/* extras (butterfly) start */
+#vektor_butterfly_2 img {
+  position: absolute;
+  width: 100px;
+  bottom: 35px;
+  left: 118px;
+}
+/* extras (butterfly)  end*/
+
+/* TIMER */
+#time-countdown {
+background-color: var(--primaryOrange);
+ z-index: 6;
+ padding: 20px 0;
+ text-align: center;
+}
+
+#date {
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* container angka */
+#timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    /* flex-wrap: wrap; */
+}
+
+/* setiap kotak */
+#timer > div {
+    background: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+    min-width: 70px;
+    text-align: center;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.15);
+}
+
+/* angka */
+#timer > div > div:first-child {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+/* label (days/hours/etc) */
+#timer > div > div:last-child {
+    font-size: 0.85rem;
+  
+}
+
+
+/* TIMER */
+/* content-2 end */
+
+/* content-3 start */
+
+#section_3 {
+  overflow: hidden !important;
+  position: relative;
+}
+
+#vektor_flower_section_3 img {
+  position: absolute;
+  width: 400px;
+  right: -176px;
+  top: -84px;
+  pointer-events: none;
+}
+
+#image_place_1 img {
+  width: 250px;
+}
+
+#image_place_2 img {
+  width: 250px;
+}
+
+.text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* content-3 end */
+
+/* swiper start */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* swiper end */
+
+/* content-4 start */
+
+/* content-4 end */
+
+/* content-5 start */
+
+#landscape_closing {
+  position: relative;
+  height: 50vh;
+}
+#closing_image {
+  position: absolute;
+  width: 100%;
+  height: 100%; /* Biar area ini full menutupi parent */
+  overflow: hidden;
+}
+
+#closing_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ini yang bikin cover seperti background */
+  object-position: center;
+  display: block;
+}
+
+/* content-5 end */
+
+
+/* animate start  */
+
+.animate-wiggle {
+    animation: wiggleSoft 6s ease-in-out infinite;
+    transform-origin: center;
+}
+
+/* Pergerakan diperbesar dan lebih lembut */
+@keyframes wiggleSoft {
+    0%   { transform: rotate(0deg) scale(1); }
+    15%  { transform: rotate(1.5deg) scale(1.02); }
+    30%  { transform: rotate(-1deg) scale(1.01); }
+    50%  { transform: rotate(2deg) scale(1.03); }
+    70%  { transform: rotate(-1.2deg) scale(1.015); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+.delay-1 { animation-delay: 1s; }
+.delay-2 { animation-delay: 2s; }
+.delay-3 { animation-delay: 3s; }
+
+/* opsi tambahan jika ingin cycle sangat halus */
+.smooth-cycle {
+    --animate-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    opacity: 0.98;
+    transform-origin: center;
+}
+
+/* animate end */
