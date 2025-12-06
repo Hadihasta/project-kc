@@ -74,6 +74,7 @@
   --secondaryOrange: #7b6557;
 }
 
+
 /* media query start  */
 
 /* mobile */
@@ -107,6 +108,9 @@
   height: 20vh;
 }
 
+.vh-50 {
+  height: 50vh;
+}
 .vh-85 {
   height: 85vh;
 }
@@ -145,6 +149,12 @@
 .absolute {
   position: absolute;
 }
+
+
+.bg-primaryOrange{ 
+      background-color: var(--primaryOrange)
+}
+
 
 /* base end */
 
@@ -517,3 +527,33 @@
       object-fit: cover;
     }
 /* swiper end */
+
+
+/* content-4 start */
+
+
+/* content-4 end */
+
+
+/* content-5 start */
+
+#landscape_closing{
+    position: relative;
+    height: 50vh;
+}
+#closing_image {
+  position: absolute;
+  width: 100%;
+  height: 100%; /* Biar area ini full menutupi parent */
+  overflow: hidden;
+}
+
+#closing_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* Ini yang bikin cover seperti background */
+  object-position: center;
+  display: block;
+}
+
+/* content-5 end */
