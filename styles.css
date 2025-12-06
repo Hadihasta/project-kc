@@ -82,6 +82,32 @@
     .adjustment_section_2{
       max-width: 250px;
     }
+
+
+    /* timer */
+
+      #date {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    #timer {
+        gap: 10px;
+    }
+
+    #timer > div {
+        min-width: 65px;
+        padding: 10px 12px;
+        border-radius: 10px;
+    }
+
+    #timer > div > div:first-child {
+        font-size: 1.3rem;
+    }
+
+    #timer > div > div:last-child {
+        font-size: 0.75rem;
+    }
 }
 
 /* tablet */
@@ -91,6 +117,13 @@
   .group-potrait_section_2 {
     max-width: 800px;
   }
+
+  /* .lg-vh-90{
+     height: 90vh !important;
+  }
+ .lg-vh-10{
+     height: 10vh !important;
+  } */
   .logo-kc_chocolate {
     max-height: 200px;
   }
@@ -98,6 +131,15 @@
   .fs-lg-25{
     font-size: 25px !important;
   }
+
+    #timer {
+        gap: 14px;
+    }
+
+    #timer > div {
+        min-width: 75px;
+    }
+
   /* section 2 */
 }
 
@@ -468,6 +510,10 @@
   align-items: center;
 }
 
+/* logo */
+  .logo-kc_chocolate {
+    max-height: 180px;
+  }
 /* vektor flower start */
 
 #vektor_flower_1 {
@@ -540,15 +586,59 @@
 #vektor_butterfly_2 img {
   position: absolute;
   width: 100px;
-  bottom: 9px;
+  bottom: 35px;
   left: 118px;
 }
 /* extras (butterfly)  end*/
 
+/* TIMER */
 #time-countdown {
-  background-color: var(--primaryOrange);
-  z-index: 6;
+background-color: var(--primaryOrange);
+ z-index: 6;
+ padding: 20px 0;
+ text-align: center;
 }
+
+#date {
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* container angka */
+#timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    /* flex-wrap: wrap; */
+}
+
+/* setiap kotak */
+#timer > div {
+    background: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+    min-width: 70px;
+    text-align: center;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.15);
+}
+
+/* angka */
+#timer > div > div:first-child {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+/* label (days/hours/etc) */
+#timer > div > div:last-child {
+    font-size: 0.85rem;
+  
+}
+
+
+/* TIMER */
 /* content-2 end */
 
 /* content-3 start */
