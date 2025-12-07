@@ -1147,6 +1147,59 @@
 
 /* content-5 start */
 
+/* Section background */
+.personal-section {
+  background-color: var(--primaryOrange);
+}
+
+/* Title */
+.personal-title .title-text {
+  font-size: clamp(40px, 6vw, 100px);
+}
+
+.personal-title .subtitle-text {
+  font-size: clamp(14px, 2vw, 24px);
+}
+
+/* Form wrapper max width */
+.form-wrapper {
+  max-width: 500px;
+}
+
+/* Buttons */
+.btn-upload,
+.btn-send {
+  background-color: var(--primaryChocolate);
+  color: white;
+  border-radius: 6px;
+  padding: 10px 0;
+}
+
+.btn-upload:hover,
+.btn-send:hover {
+  opacity: 0.9;
+}
+
+/* Divider */
+.preview-text .divider {
+  width: 50%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+}
+
+/* See all messages */
+.btn-view-all {
+  background-color: #6a5a4d;
+  color: white;
+  border-radius: 6px;
+  padding: 10px 0;
+}
+
+.btn-view-all:hover {
+  opacity: 0.9;
+}
+
 #landscape_closing {
   position: relative;
   height: 50vh;
@@ -1164,6 +1217,67 @@
   object-fit: cover;
   object-position: center;
   display: block;
+}
+
+/* Wrapping Section */
+.closing-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* PHOTO WRAPPER */
+.closing-photo-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Scalable Background Image */
+.closing-photo {
+  width: 100%;
+  height: 110%; /* <- boleh ubah untuk zoom besar */
+  object-fit: cover;
+  transform: scale(1.1); /* scale untuk zoom */
+  object-position: center;
+}
+
+/* GRADIENT OVERLAY */
+.closing-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(223, 185, 123, 0.7) 80%, var(--primaryOrange) 100%);
+}
+
+/* CONTENT */
+.closing-content {
+  position: absolute;
+  z-index: 3;
+  bottom: 12%;
+  width: 100%;
+  text-align: center;
+}
+
+/* Title */
+.closing-title {
+  font-size: clamp(32px, 5vw, 80px);
+}
+
+/* Subtitle */
+.closing-subtitle {
+  font-size: clamp(14px, 2vw, 22px);
+}
+
+/* Logo */
+.closing-logo-img {
+  width: 417px;
+  position: relative;
+  opacity: 0.9;
+  bottom: 100px;
+  right: 41px;
 }
 
 /* content-5 end */
