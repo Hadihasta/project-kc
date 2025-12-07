@@ -2,17 +2,24 @@ document.addEventListener('DOMContentLoaded', function () {
   // Init AOS
   if (typeof AOS !== 'undefined') AOS.init();
 
-  // Hamburger (opsional jQuery)
+  // Hamburger 
   if (typeof $ !== 'undefined') {
-    $('#menuBtn').on('click', function () {
-      $(this).toggleClass('active');
-      $('#sidebar').toggleClass('open');
-    });
+  $('#menuBtn').on('click', function () {
+  $(this).toggleClass('active');
+  $('#sidebar').toggleClass('open');
+});
 
-    $('#overlay').on('click', function () {
-      $('#menuBtn').removeClass('active');
-      $('#sidebar').removeClass('open');
-    });
+// Klik overlay → tutup menu & burger
+$('#overlay').on('click', function () {
+  $('#menuBtn').removeClass('active');
+  $('#sidebar').removeClass('open');
+});
+
+// Klik salah satu item menu → tutup juga
+$('#sidebar a').on('click', function () {
+  $('#menuBtn').removeClass('active');
+  $('#sidebar').removeClass('open');
+});
   }
   const swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,

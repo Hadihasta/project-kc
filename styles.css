@@ -240,7 +240,10 @@
   white-space: nowrap;
 }
 
-
+.justify-start{ 
+    display: flex;
+    justify-content: start;
+}
 
 .flex-col-center {
   display: flex;
@@ -1268,7 +1271,7 @@ position: absolute;
 /* Buttons */
 .btn-upload,
 .btn-send {
-  background-color: var(--primaryChocolate);
+  background-color: var(--secondaryOrange);
   color: white;
   border-radius: 6px;
   padding: 10px 0;
@@ -1289,7 +1292,7 @@ position: absolute;
 
 /* See all messages */
 .btn-view-all {
-  background-color: #6a5a4d;
+  background-color: var(--secondaryChocolate);
   color: white;
   border-radius: 6px;
   padding: 10px 0;
