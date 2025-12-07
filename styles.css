@@ -111,11 +111,47 @@
 
 /* tablet */
 
+/* music button */
+
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #dfb97b;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 99999999;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+}
+  
+.music-btn span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* music button */
+
 /* section 2  */
 @media (min-width: 768px) {
   .group-potrait_section_2 {
     max-width: 800px;
   }
+
+  .flex-dir-row-lg {
+    display: flex !important;
+    flex-direction: row !important;
+}
 
   .logo-kc_chocolate {
     max-height: 200px;
@@ -133,6 +169,10 @@
     min-width: 75px;
   }
 
+  .button-option {
+  padding: 12px 28px !important;
+ 
+}
   /* section 2 */
 
   /* section 3 */
@@ -199,6 +239,8 @@
 .nowrap {
   white-space: nowrap;
 }
+
+
 
 .flex-col-center {
   display: flex;
@@ -292,6 +334,10 @@
   color: var(--primaryChocolate);
 }
 /* font-size */
+
+.fs-12{ 
+    font-size: 12px;
+}
 
 .fs-18 {
   font-size: 18px;
@@ -1011,7 +1057,7 @@ position: absolute;
 }
 
 .button-option {
-  padding: 12px 28px;
+  padding: 6px 14px;
   border-radius: 2px;
   font-style: italic;
   font-size: 16px;

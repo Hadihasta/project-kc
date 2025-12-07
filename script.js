@@ -85,5 +85,23 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => scrollLock = false, 300);
   }, { passive: false });
 
+ const btn = document.getElementById("musicBtn");
+const iconPlay = document.getElementById("iconPlay");
+const iconPause = document.getElementById("iconPause");
+
+let isPlaying = false;
+
+btn.addEventListener("click", () => {
+  isPlaying = !isPlaying;
+
+  if (isPlaying) {
+    iconPlay.style.display = "none";
+    iconPause.style.display = "block";
+  } else {
+    iconPause.style.display = "none";
+    iconPlay.style.display = "block";
+  }
+});
+
   console.log('script.js loaded');
 });
