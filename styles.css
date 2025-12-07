@@ -325,6 +325,7 @@
 
 .put-front {
   z-index: 999999;
+  position: relative;
 }
 /* base end */
 
@@ -708,6 +709,39 @@
   pointer-events: none;
 }
 
+#dragonfly_section_3 img {
+  position: absolute;
+  width: 150px;
+  left: 100px;
+  top: 100px;
+  pointer-events: none;
+}
+
+.dragonfly_3 {
+  width: 120px;
+}
+
+#butterfly_section_3 img {
+position: absolute;
+    width: 150px;
+    left: 336px;
+    pointer-events: none;
+    bottom: 232px;
+
+}
+
+
+
+#dragonfly_section_3_2 img {
+     position: absolute;
+    width: 150px;
+    left: -221px;
+    top: -45px;
+    pointer-events: none;
+}
+
+
+
 #image_place_1 img {
   width: 720px;
 }
@@ -949,6 +983,25 @@
 #section_4 {
   overflow: hidden !important;
   position: relative;
+}
+
+
+
+#butterfly_section_4 img {
+    position: absolute;
+    width: 150px;
+    left: 66px;
+    pointer-events: none;
+    bottom: 516px;
+}
+
+
+#dragonfly_4 img {
+    position: absolute;
+    width: 150px;
+    left: 750px;
+    pointer-events: none;
+    bottom: 469px;
 }
 
 .button-option-wrapper {
