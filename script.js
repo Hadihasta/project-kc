@@ -103,5 +103,17 @@ btn.addEventListener("click", () => {
   }
 });
 
+ $(window).on('scroll', function () {
+  $('.scroll-animate').each(function () {
+    let elementTop = $(this).offset().top;
+    let scrollBottom = $(window).scrollTop() + $(window).height();
+
+    if (scrollBottom > elementTop + 50) {
+      $(this).addClass('animate__animated animate__fadeInDown');
+      $(this).removeClass('opacity-0');
+    }
+  });
+});
+
   console.log('script.js loaded');
 });
