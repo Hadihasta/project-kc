@@ -33,10 +33,10 @@ $('#sidebar a').on('click', function () {
   const swiperFull = new Swiper(".mySwiperFull", {
     loop: true,
     speed: 600,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    }
+    // navigation: {
+    //   nextEl: ".swiper-button-next",
+    //   prevEl: ".swiper-button-prev",
+    // }
   });
 
   const lightbox = document.getElementById('lightboxSwiper');
@@ -53,6 +53,24 @@ $('#sidebar a').on('click', function () {
       });
     });
 
+// === EXIT FULLSCREEN KETIKA KLIK DI LUAR FOTO ===
+const swiperContainer = document.querySelector('.mySwiperFull');
+
+// Klik di container swiper
+swiperContainer.addEventListener('click', function (e) {
+
+  // Jika fullscreen aktif dan yang diklik BUKAN gambar
+  if (document.fullscreenElement && !e.target.closest('img')) {
+    document.exitFullscreen();
+  }
+});
+
+// Cegah klik gambar bubble keluar
+swiperContainer.querySelectorAll('img').forEach(img => {
+  img.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+});
   // === TUTUP LIGHTBOX ===
   function closeLightbox() {
     lightbox.classList.remove('show');
@@ -71,7 +89,8 @@ $('#sidebar a').on('click', function () {
   document.querySelector('.fullscreenBtn')
     .addEventListener('click', function () {
       if (!document.fullscreenElement) {
-        lightbox.requestFullscreen();
+      document.querySelector('.mySwiperFull').requestFullscreen();
+
       } else {
         document.exitFullscreen();
       }

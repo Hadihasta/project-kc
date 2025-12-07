@@ -122,7 +122,7 @@
   border-radius: 50%;
   background: #dfb97b;
   border: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,7 +134,7 @@
 .music-btn:hover {
   transform: scale(1.1);
 }
-  
+
 .music-btn span {
   font-size: 22px;
   font-weight: bold;
@@ -151,7 +151,7 @@
   .flex-dir-row-lg {
     display: flex !important;
     flex-direction: row !important;
-}
+  }
 
   .logo-kc_chocolate {
     max-height: 200px;
@@ -170,9 +170,8 @@
   }
 
   .button-option {
-  padding: 12px 28px !important;
- 
-}
+    padding: 12px 28px !important;
+  }
   /* section 2 */
 
   /* section 3 */
@@ -240,9 +239,9 @@
   white-space: nowrap;
 }
 
-.justify-start{ 
-    display: flex;
-    justify-content: start;
+.justify-start {
+  display: flex;
+  justify-content: start;
 }
 
 .flex-col-center {
@@ -338,8 +337,8 @@
 }
 /* font-size */
 
-.fs-12{ 
-    font-size: 12px;
+.fs-12 {
+  font-size: 12px;
 }
 
 .fs-18 {
@@ -771,25 +770,20 @@
 }
 
 #butterfly_section_3 img {
-position: absolute;
-    width: 150px;
-    left: 336px;
-    pointer-events: none;
-    bottom: 232px;
-
+  position: absolute;
+  width: 150px;
+  left: 336px;
+  pointer-events: none;
+  bottom: 232px;
 }
-
-
 
 #dragonfly_section_3_2 img {
-     position: absolute;
-    width: 150px;
-    left: -221px;
-    top: -45px;
-    pointer-events: none;
+  position: absolute;
+  width: 150px;
+  left: -221px;
+  top: -45px;
+  pointer-events: none;
 }
-
-
 
 #image_place_1 img {
   width: 720px;
@@ -997,11 +991,15 @@ position: absolute;
 /* SWIPER fullscreen */
 .mySwiperFull {
   max-height: 90vh;
-  max-width: 60vw;
+  max-width: 50vw;
   width: auto;
   height: auto;
   transform: scale(0.85);
   transition: transform 0.35s ease-out;
+}
+.swipper-fullscreen-center{ 
+      text-align: center;
+    vertical-align: baseline;
 }
 
 .lightbox.show .mySwiperFull {
@@ -1015,13 +1013,16 @@ position: absolute;
 .lightbox .swiper-slide img {
   height: 90vh;
   width: auto;
-  max-width: 60vw;
+  /* max-width: 60vw; */
   object-fit: contain;
 }
 
 @media (max-width: 768px) {
   .lightbox .swiper-slide img {
-    max-width: 95vw;
+    width: auto;
+    height: 50vh;
+    object-fit: contain;
+    width: 100%;
   }
 }
 
@@ -1034,23 +1035,20 @@ position: absolute;
   position: relative;
 }
 
-
-
 #butterfly_section_4 img {
-    position: absolute;
-    width: 150px;
-    left: 66px;
-    pointer-events: none;
-    bottom: 516px;
+  position: absolute;
+  width: 150px;
+  left: 66px;
+  pointer-events: none;
+  bottom: 516px;
 }
 
-
 #dragonfly_4 img {
-    position: absolute;
-    width: 150px;
-    left: 750px;
-    pointer-events: none;
-    bottom: 469px;
+  position: absolute;
+  width: 150px;
+  left: 750px;
+  pointer-events: none;
+  bottom: 469px;
 }
 
 .button-option-wrapper {
