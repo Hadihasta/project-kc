@@ -827,10 +827,10 @@
 }
 
 #vektor_flower_3_2 img:nth-child(1) {
-    right: -241px;
-    bottom: -171px;
-    z-index: 1;
-    width: 800px;
+  right: -241px;
+  bottom: -171px;
+  z-index: 1;
+  width: 800px;
 }
 
 #vektor_flower_3_2 img:nth-child(2) {
@@ -847,10 +847,10 @@
 }
 
 #vektor_flower_3_2 img:nth-child(4) {
-     right: -610px;
-    bottom: -223px;
-    z-index: 1;
-    width: 1068px;
+  right: -610px;
+  bottom: -223px;
+  z-index: 1;
+  width: 1068px;
 }
 
 #vektor_flower_3_2 img:nth-child(5) {
@@ -877,7 +877,7 @@
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -898,7 +898,7 @@
   top: 20px;
   right: 20px;
   z-index: 10000;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   border: none;
   color: white;
   padding: 10px 14px;
@@ -921,8 +921,12 @@
   transition: transform 0.35s ease-out;
 }
 
-.lightbox.show .mySwiperFull { transform: scale(1); }
-.lightbox.closing .mySwiperFull { transform: scale(0.75); }
+.lightbox.show .mySwiperFull {
+  transform: scale(1);
+}
+.lightbox.closing .mySwiperFull {
+  transform: scale(0.75);
+}
 
 /* Image rules */
 .lightbox .swiper-slide img {
@@ -932,12 +936,11 @@
   object-fit: contain;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .lightbox .swiper-slide img {
     max-width: 95vw;
   }
 }
-
 
 /* swiper end */
 
@@ -947,8 +950,6 @@
   overflow: hidden !important;
   position: relative;
 }
-
-
 
 .button-option-wrapper {
   display: flex;
@@ -961,16 +962,16 @@
   border-radius: 2px;
   font-style: italic;
   font-size: 16px;
-  background: #c09052; 
+  background: #c09052;
   color: white;
   cursor: pointer;
   transition: 0.25s ease;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
 }
 
 .button-option:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .button-option.active {
@@ -980,7 +981,6 @@
 .button-option:active {
   transform: scale(0.97);
 }
-
 
 .event-dropdown-wrapper {
   display: flex;
@@ -998,7 +998,7 @@
 .event-title {
   font-style: italic;
   font-size: 18px;
-  color: #7c6a54;     /* warm brown, mirip gambar */
+  color: #7c6a54; /* warm brown, mirip gambar */
   text-align: center;
   margin-bottom: 8px;
   line-height: 1.3;
@@ -1025,13 +1025,54 @@
   border-color: #bda98a;
 }
 
-/* #vektor_flower_section_4 img {
-  position: absolute;
-  width: 1300px;
-  right: -769px;
-  top: -262px;
+#vektor_flower_4_1 {
+  left: 0px;
+  bottom: 50%;
+  width: 500px;
+  height: 500px;
   pointer-events: none;
-} */
+  z-index: 1;
+}
+
+#vektor_flower_4_1 img {
+  position: absolute;
+  width: 100%;
+}
+
+#vektor_flower_4_1 img:nth-child(1) {
+     z-index: 1;
+    width: 300px;
+    top: -154px;
+    left: -54px;
+}
+
+#vektor_flower_4_1 img:nth-child(2) {
+  top: -249px;
+  z-index: 1;
+  width: 300px;
+  left: -144px;
+}
+
+#vektor_flower_4_1 img:nth-child(3) {
+  top: -169px;
+  z-index: 1;
+  width: 700px;
+  left: -352px;
+}
+
+#vektor_flower_4_1 img:nth-child(4) {
+  top: -111px;
+  z-index: 1;
+  width: 900px;
+  left: -433px;
+}
+
+#vektor_flower_4_1 img:nth-child(5) {
+  top: 280px;
+  z-index: 1;
+  width: 328px;
+  left: -26px;
+}
 
 /* content-4 end */
 
@@ -1044,14 +1085,14 @@
 #closing_image {
   position: absolute;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   overflow: hidden;
 }
 
 #closing_image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   object-position: center;
   display: block;
 }
